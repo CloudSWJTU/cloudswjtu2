@@ -1,0 +1,65 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+    <div>
+    <form class="bs-example bs-example-form" role="form">
+        <div>
+
+            <div style="float: left;width: 400px">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="keyword" value="{% if keyword %}{{ keyword }}{% endif %}" placeholder="根据用户名搜索">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">搜索</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+</div>
+        <div style="clear: both"></div>
+
+    <table style="margin-left: -18%;margin-top: 20px">
+        <thead>
+        <tr>
+
+            <th>id</th>
+            <th>用户名</th>
+            <th>创建时间</th>
+            <th>请求url</th>
+            <th>请求类型</th>
+            <th>请求参数</th>
+            <th>用户标识</th>
+            <th>ip地址</th>
+        </tr>
+        </thead>
+<tbody>
+{% for re in result %}
+
+    <tr >
+        <td>{{ re.id }}</td>
+        <td>{{ re.username }}</td>
+
+        <td>{{ re.create_time }}</td>
+        <td>{{ re.url }}</td>
+        <td>{{ re.type }}</td>
+        <td>{{ re.params }}</td>
+        <td>{{ re.flag }}</td>
+        <td>{{ re.ip }}</td>
+    </tr>
+{%  endfor %}
+</tbody>
+</table>
+<ul class="pagination">
+{% for foo in page_range %}
+    {% if foo == page %}
+        	<li class="active"><a href="?page={{ foo }}{% if keyword %}&keyword={{ keyword }}{% endif %}">{{ foo }}</a></li>
+
+        {% else %}
+	<li><a href="?page={{ foo }}{% if keyword %}&keyword={{ keyword }}{% endif %}">{{ foo }}</a></li>
+
+    {% endif %}
+{% endfor %}
+
+
+</ul>
+
+{% endblock %}

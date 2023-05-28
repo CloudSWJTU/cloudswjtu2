@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>云上交大后台管理系统</title>
+    	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- 引入 layui.css -->
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.8.0-rc.14/css/layui.css">
+<!--引入layui.js-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.7.6/layui.min.js" integrity="sha512-jVlfkkRyCyrICx3iFs80jgim5Vmg2xVjAdBRCw/E/ZukJPYpjXfTyyiB1Y1gRsBeAC8CJ+jYIk0teYL4qV85gA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+
+    .changecolort{
+      background-color: rgb(0, 0, 0);
+    }
+    .datatable{
+        position:absolute;
+        left: 30%;
+        top: 20%
+    }
+  </style>
+
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header" class="changecolort">
+    <div class="layui-logo layui-hide-xs changecolort">云上交大后台管理系统</div>
+    <!-- 头部区域（可配合layui 已有的水平导航） -->
+
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+        <a href="javascript:;">
+          <img src="../../static/img/logo.png" class="layui-nav-img">
+          {{username}}
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">Your Profile</a></dd>
+          <dd><a href="">Settings</a></dd>
+          <dd><a href="">Sign out</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+        <a href="javascript:;">
+          <i class="layui-icon layui-icon-more-vertical"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree" lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">社团管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="/admin/league/list">社团管理</a></dd>
+            <dd><a href="/admin/activity/list">活动管理</a></dd>
+          </dl>
+        </li>
+
+        <li class="layui-nav-item"><a href="/admin/history/list">历史管理</a></li>
+        <li class="layui-nav-item"><a href="/admin/landmark/list">地标管理</a></li>
+        <li class="layui-nav-item"><a href="/admin/server/list">服务区管理</a></li>
+        <li class="layui-nav-item"><a href="/admin/account/list">用户管理</a></li>
+        <li class="layui-nav-item"><a href="/admin/video/list">视频管理</a></li>
+        <li class="layui-nav-item"><a href="/admin/log/list">日志信息</a></li>
+      </ul>
+    </div>
+  </div>
+<div class="datatable layui-table">
+
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+</div>
+</body>
+</html>

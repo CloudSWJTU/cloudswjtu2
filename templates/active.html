@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社团</title>
+       <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+ <style>
+    .blog-list-item{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #adadad;
+}
+
+.blog-list-item:last-child{
+    border-bottom: 0;
+}
+
+.blog-list-item:first-child{
+    padding-top: 0;
+}
+
+.blog-list-item .title{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.blog-list-item .title:hover {
+    color: #9d9d9d;
+}
+
+.blog-list-item .info{
+    color: #9d9d9d;
+}
+    </style>
+</head>
+<body>
+<link href="/static/css/club_style1.css" rel="stylesheet" media="screen" type="text/css" />
+<div class="con">
+  <div class="head">
+
+    <div class="nav">
+      <ul>
+        <li><a href="/league/index">首页 </a></li>
+          {% for cate in cates %}
+                  <li><a href="/league/detail/{{ cate.id }}">{{ cate.name }} </a></li>
+
+          {% endfor %}
+                              <li><a href="/league/active/list">社团</a></li>
+
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <!------------------ end nav--------------------------->
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="main">
+    <div class="left">
+      <div class=" l1"><a href="#"><img src="/static/img/swjtu_logo_1.1_sm.png"  alt="图片"/></a></div>
+      <div class="left_nav">
+        <ul>
+            {% for cate in cate_list %}
+                      <li><a href="/league/detail/{{ cate.id }}">{{ cate.name }} </a><span><a href="/league/detail/{{ cate.id }}">{{ cate.num }} </a></span></li>
+
+            {% endfor %}
+        </ul>
+      </div>
+      <!------------------ end left_nav--------------------------->
+
+    </div>
+    <!------------------ end left--------------------------->
+    <div class="right">
+      <div class="right_des">
+
+<div class="row">
+<div class="col-sm-2"></div>
+
+<div class="col-sm-8" style="margin-top: 100px">
+    <div style="text-align: center;width: 100%"><h1>活动列表</h1></div>
+
+           <form role="form" action="" method="get">
+                    <div class="form-group has-feedback">
+                        <label class="sr-only" for="Search">Search：</label>
+                        <input type="search" class="form-control" placeholder="搜索" name="keyword" id="Search">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+                </form>
+                    <div class="blog-list" style="margin-top: 100px">
+                        {% for foo in result %}
+                                        <div class="blog-list-item clearfix">
+                    <div class="col-sm-4">
+                        <img src="{{ foo.image }}" style="width: 150px;max-height: 100px">
+                    </div>
+                    <div class="col-sm-8">
+                        <h4 style="font-weight: bold">
+                           {{foo.name }}
+                        </h4>
+                        <span>{{ foo.summary }}</span>
+                        <div class="info">
+
+                            <span>{{ foo.create_user }}</span> |
+                            <span>{{ foo.create_time }}</span>
+                            |
+                            <span>{{ foo.address }}</span>
+                            |
+                            <span>{{ foo.league_name }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                        {% endfor %}
+
+
+            </div>
+    <hr>
+    <div style="text-align: center;width: 100%">
+        <h1>发布活动</h1>
+        </div>
+    <form action="/league/active/add" enctype="multipart/form-data" method="post">
+
+    <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">活动标题</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" id="firstname" placeholder="请输入标题">
+    </div>
+  </div>
+
+    <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">活动地点</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="address" id="firstname" placeholder="请输入地点">
+    </div>
+  </div>
+            <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">活动社团</label>
+    <div class="col-sm-10">
+      <select type="text" class="form-control" name="league_id">
+          {% for league in leagues %}
+              <option value="{{ league.id }}">{{ league.name }}</option>
+
+          {% endfor %}
+
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastname" class="col-sm-2 control-label">活动图片</label>
+    <div class="col-sm-10" style="margin-top: 10px">
+      <input type="file" class="form-control" id="lastname" name="image">
+    </div>
+  </div>
+      <div class="form-group">
+    <label for="lastname" class="col-sm-2 control-label">活动简介</label>
+    <div class="col-sm-10"  style="margin-top: 10px">
+        <textarea name="summary" class="form-control" style="width: 100%;"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">发布</button>
+    </div>
+  </div>
+</form>
+
+</div>
+</div>
+
+
+      </div>
+      <!------------------ end article_nav--------------------------->
+    </div>
+    <!------------------ end right--------------------------->
+    <div class="clear"></div>
+  </div>
+  <!------------------ end main--------------------------->
+  <div class="clear"></div>
+  <div class="foot">
+    <p>Copyright 2022</p>
+    <p>All Rights Reserved</p>
+  </div>
+</div>
+<script type="text/javascript" src="../static/js/club.js"> </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+
+    <div>
+        <form class="bs-example bs-example-form" role="form">
+            <div>
+                <div style="float: left;width: 100px">
+                    <a type="button" class="layui-btn" href="/admin/video/option">添加</a>
+
+                </div><!-- /.col-lg-6 -->
+                <div style="float: left;width: 400px">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="keyword"
+                               value="{% if keyword %}{{ keyword }}{% endif %}">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">搜索</button>
+                    </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </form>
+    </div>
+    <div style="clear: both"></div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>标题</th>
+            <th>视频</th>
+            <th>创建时间</th>
+            <th>删除</th>
+            <th>修改</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for re in result %}
+
+            <tr>
+                <td>{{ re.id }}</td>
+
+                <td>{{ re.title }}</td>
+                <td>
+
+                    <video width="130px" height="100px" controls>
+
+                        <source src="{{ re.url }}" type="video/mp4">
+
+                    </video>
+
+                </td>
+                <td>{{ re.create_time }}</td>
+                <td><a href="/admin/video/del?id={{ re.id }}">
+                    <button>删除</button>
+                </a></td>
+                <td><a href="/admin/video/option?id={{ re.id }}">
+                    <button>修改</button>
+                </a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div id="demo-laypage-normal-1"></div>
+    <ul class="pagination">
+        {% for foo in page_range %}
+            {% if foo == page %}
+                <li class="active"><a
+                        href="?page={{ foo }}{% if keyword %}&keyword={{ keyword }}{% endif %}">{{ foo }}</a></li>
+
+            {% else %}
+                <li><a href="?page={{ foo }}{% if keyword %}&keyword={{ keyword }}{% endif %}">{{ foo }}</a></li>
+
+            {% endif %}
+        {% endfor %}
+
+
+    </ul>
+
+
+{% endblock %}

@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% block title %}交大历史{% endblock %}
+{% block header %}
+    <link rel="stylesheet" href="/static/css/sec.css">
+    <link rel="stylesheet" href="/static/css/griddisplay.css">
+    <link rel="stylesheet" href="/static/css/displayphoto.css">
+    <link rel="stylesheet" href="/static/css/shangchuanhis.css">
+    <link rel="stylesheet" href="/static/css/navstyle.css">
+    <link rel="stylesheet" href="/static/css/copyright_default.css">
+    <link rel="stylesheet" href="/static/css/background.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/displayphoto.js"></script>
+    <script src="/static/js/shangchuan.js"></script>
+    <style>
+        body {
+            margin: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .masonry {
+            column-count: 5;
+            column-gap: 0;
+        }
+
+        .item {
+            /* padding: 2px; */
+            position: relative;
+            /* 计数器递增 第一参数为计数器名称（必写） 第二参数为初始值 默认为1 */
+            counter-increment: item-counter;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all .3s;
+            /* 为了控制文本块分解成单独的列，以免项目列表的内容跨列，破坏整体的布局。 */
+            break-inside: avoid;
+            box-sizing: border-box;
+        }
+
+        .item img {
+
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            z-index: 9;
+
+        }
+
+        .item::after {
+            position: absolute;
+            display: block;
+            top: 2px;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+
+        }
+
+        img:hover {
+            /* margin-top: -3px; */
+
+            animation: bounceIn 0.3s ease-in 2 alternate;
+        }
+
+        .item:hover .display {
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+            /* background-color: red; */
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px; */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, .3);
+            transition: all .3;
+            /* animation: bounceIn 0.3s  ease-in 2 alternate; */
+
+            /* 计数器 */
+            content: counter(item-counter);
+        }
+
+        .item:nth-child(5n+1) {
+            order: 1;
+        }
+
+        .item:nth-child(5n+2) {
+            order: 2;
+        }
+
+        .item:nth-child(5n+3) {
+            order: 3;
+        }
+
+        .item:nth-child(5n+4) {
+            order: 4;
+        }
+
+        .item:nth-child(5n+5) {
+            order: 5;
+        }
+
+
+        @keyframes bounceIn {
+            100% {
+                /* 向上移动3px */
+                /* transform: translateY(-3px) */
+                /* 放大1.02倍 */
+                transform: scale(1.02);
+                /* margin-top: -3px; */
+            }
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+
+
+            <section class="sec">
+            <div class="titlebk">
+                <div class="title">
+                    精勤求学&emsp;敦笃励志 <br>
+                    果毅力行&emsp;忠恕任事
+                </div>
+            </div>
+        </section>
+        <div class="displayphoto">
+        <ul id="banner">
+          <li><img src="/static/img/老房子.jpg" class="cur_img"></li>
+          <li><img src="/static/img/老房子2.jpg" class="cur_img"></li>
+          <li><img src="/static/img/老房子.jpg" class="cur_img"></li>
+          <li><img src="/static/img/老校门.jpg" class="cur_img"></li>
+          <li><img src="/static/img/竢实扬华碑.jpg" class="cur_img"></li>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <img src="/static/img/left.png" class="left img_Public">
+          <img src="/static/img/right.png" class="right1 img_Public">
+        </ul>
+        </div>
+
+
+    <div class="parent">
+        <div id="div1"> </div>
+        <div id="div2"> </div>
+        <div id="div3"> </div>
+        <div id="div4"> </div>
+        <div id="div5"> </div>
+        <div id="div6"> </div>
+        <div id="div7"> </div>
+        <div id="div8">
+        <img src="./img/交大迁校.jpeg" class="qianxiao"><span class="time">1933年</span>，日本军队入侵山海关，危急的局势下学校不得不考虑搬迁。1935应师生提出的主张，学校搬迁至上海。在国民党与日寇媾和后才搬回。<span class="time">1937年</span>，日军全面侵华，校园再度被占领，在战争、国民党腐败和经费拮据的压力下学校迁至湖南，<span class="time">12月15日</span>，交通大学唐山工程学院在湘潭举行了开学典礼。<span class="time">1938年10月25日</span>，日军占领武汉。之后又因为日军进攻长沙，师生历经坎坷，穿越战火，最终于<span class="time">1939年1月28日</span>到达平越，成功复课。
+        <span class="time">1944年11月</span>，又起波澜。日本侵略者于4月中旬发动了豫湘桂战役。师生为了躲避战火，被迫逃亡重庆，最终在璧山丁家坳正式开学复课。直至抗日战争胜利后，学校搬回唐山。
+        </div>
+        <div id="div9"> </div>
+        <div id="div10"> </div>
+        <div id="div11"> </div>
+        <div id="div12"> </div>
+        <div id="div13"> <img src="./img/平越.png"></div>
+        <div id="div14"> </div>
+        <div id="div15"> <img src="./img/chonghuiguli.png" alt=""></div>
+        <div id="div16"> </div>
+        <div id="div17"> </div>
+        <div id="div18"><img src="./img/shejiweiguo.png">为了适应国家对发展教育的布局，在院系调整中，将我校与铁道工程无关的或关系较少的系科，都调到了其他院校。<br>
+
+        一、将冶金系调至北京钢铁学院（今北京科技大学）。冶金系除留下教授、助教各1名外，其余的以系主任张文奇教授为首的13名教师（教授4人、副教授1人、助教7人、体育组助教1人）与学生73名全部被调至钢院，成为建立钢院的骨干力量，张文奇出任该院院长。<br>
+
+        二、采矿系被调至中国矿业学院（今中国矿业大学），以系主任何杰教授为首的采矿系部分师生（其中教授5名、副教授1名、助教1名、政治课助教1名、学生92人），被调往矿院，成为建立北京矿业学院的基础力量，何杰先后出任该院教务长和副院长。<br>
+
+        三、采矿系地质组的师生被调至北京地质学院（今中国地质大学），袁见齐教授等师生（其中教授3名、助教3名、学生2名）被调往地院，成为筹备北京地质学院的重要力量，袁见齐先后任该院系主任、副院长。仅因我院土木专业尚有工程地质课程，地质组留下教授与助教各1名。<br>
+
+        四、除保留应用化学组外，我校化学工程系被调至天津大学。以系主任余国琮教授为首的教师14名（其中教授3名、副教授4名、讲师1名、助教6名）、学生54人，被调往天津大学。<br>
+
+        五、停办材料系。<br>
+
+        六、电机系电讯组被调至哈尔滨铁道学院，电讯组教师4名（教授2名、副教授1名、助教1名）及学生14名以及电讯专修科学生2名，被调往哈尔滨铁道学院。<br>
+
+        七、土木系水利组教授黄万里及学生9人被调至清华大学。 </div>
+        <div id="div19"> </div>
+        <div id="div20"> <img src="./img/kmyc.jpg" class="kmyc">在抗美援朝运动中，我校师生作出的一个特殊贡献是四次组织工程队、三次入朝、在国内和朝鲜参与修建了5座军用机场。我校是全国高校唯一的组成工程队、修建飞机场，为抗美援朝作出贡献的高校。在前后两年半的时间里，由于有一批师生直接战斗在朝鲜前线，使整个唐院沉浸在爱国主义和国际主义热潮中，成为推动学校各项工作发展并取得重大成就的强大动力。</div>
+        <div id="div21"><img src="./img/bnmx.png" class="bnmx"> 文革期间，学校由唐山迁往峨眉，从城市迁到乡村，形成了强烈的反差。由于种种困难，使得学校人才流失严重。招生质量显著下降。学校的师资队伍元气大伤，教学质量下降，科研力量减弱，招生质量显著下降。种情况传到了海外，许多老校友瞠目结舌，不相信这是真事。一所在历史上曾经扬名中外的唐山交大，怎么会丧失了在全国高校中领先的位置。<video src="./movie and music/jdcq.mp4" controls="controls"width="50%"id="jdcq"></video>1979年3月13日，校党委利用十一届三中全提出了关于校址问题的报告.1984年4月3日，四川省人民政府同意西南交通大学在成都建总校,最终于同年10月，学校总校定址九里堤，交大的历史进入了新的篇章。在新局面中，我校积极，创办新专业，回复了许多被取消的学科。我校从院系调整后为铁路服务、学科单一、专业面狭窄的专门性学校积极向社会主义综合性大学改革，使学校学科设置与社会经济发展相适应，同时也与国际高等教育向综合性方向发展的趋势相适应。</div>
+
+        <div id="MVvideo"> <video src="./movie and music/似水年华.mp4" controls="controls"width="100%"id="sishuinianhua"></video></div>
+
+        </div>
+    <script>
+
+        //生成 100到400之间的随机数
+        //生成50次 随机的照片
+                    var masonry = document.querySelector('#masonry')
+
+        {% for history in historyList %}
+            var item = document.createElement('div')
+            item.className = 'item'
+            var div2 = document.createElement('div') //添加遮罩层
+            div2.className = 'display'
+            item.appendChild(div2)
+            var img = document.createElement('img')
+            img.src = '{{ history.img }}'
+            var img2 = document.createElement("p")
+            img2.style.fontSize = "20px";
+            img2.style.textAlign="center";
+            img2.style.marginTop="10px";
+
+            img2.innerText = "{{ history.content }}"
+
+
+
+
+            item.appendChild(img)
+            item.appendChild(img2)
+
+
+
+            {#item.appendChild(name)#}
+            masonry.appendChild(item)
+        {% endfor %}
+
+    </script>
+
+
+
+
+    <script>
+        const fileInput = document.getElementById('upload-input')
+        const uploadBtn = document.getElementById('upload-btn');
+
+        uploadBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', () => {
+            var name = prompt("请输入文件名称：", "");
+            if (name == "") {
+                alert("文件名不能为空");
+                return;
+            }
+
+
+            const file = fileInput.files[0];
+            // 在此处添加上传文件的代码
+
+            const formData = new FormData();
+            formData.append('image', file);
+            formData.append('name', name);
+
+            fetch('/history/upload', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    window.location.reload()
+                    // 在此处添加上传成功后的处理逻辑
+                })
+                .catch(error => {
+                    // 在此处添加上传失败后的处理逻辑
+                });
+        });
+
+    </script>
+
+
+    <div class=" copyright ">
+        Copyright © 2022 Cloudswjtu.All rights reserved.
+    </div>
+{% endblock %}

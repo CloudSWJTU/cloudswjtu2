@@ -1,0 +1,112 @@
+/* 历史部分上传js */
+        #shangchuan {
+            margin: 3vh;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        /* body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        } */
+        .container {
+            border: 3px;
+            border-color: rgb(117, 164, 218);
+            border-style: dotted;
+            width: 70vw;
+            height: 70vh;
+            display: flex; 
+             /*换行  */
+            flex-wrap: wrap;
+            /* flex容器在交叉轴上有多行, 该属性生效, 默认值为stretch, 
+            导致flex容器将交叉轴上的多余空间按行数平均分给每行, 所以修改为 flex-start */
+            align-content: flex-start;
+            /* 滚动 */
+            overflow-y: scroll;
+            opacity: 1;
+        }
+
+        /* 图片 */
+        .picture {
+            width: 140px;
+            height: 140px;
+            margin: 10px;
+            /* 图片无法选中 */
+            user-select: none;
+        }
+
+        /* 上传框 */
+        .upload-dragger {
+            width: 140px;
+            height: 140px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 3px dashed rgb(127, 161, 224);
+            border-radius: 10px;
+            box-sizing: border-box;
+            
+            cursor: pointer;
+        }
+        .upload-text {
+            color:rgb(127, 161, 224);
+            font-size: 13px;
+            
+            user-select: none;
+        }
+        .upload-icon path {
+            fill:rgb(127, 161, 224);
+        }
+
+       
+        #upload-input {
+            display: none;
+        }
+
+        
+        .upload-dragger:hover {
+            border: 3px dashed orange;
+        }
+        
+        .upload-dragger.drag {
+            border: 3px dashed orange;
+        }
+        .upload-dragger.drag .upload-text{
+            color: orange;
+        }
+        .upload-dragger.drag .upload-icon path{
+            fill: orange;
+        }
+
+
+        .upload-dragger.drag * {
+            pointer-events: none;
+        }
+
+        
+        .container::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent;
+        }
+       
+        .container::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgb(196, 196, 196);
+        }
+
+        #shangchuan{
+            background-image: url(../img/tuofu.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position:center;
+            opacity: 0.5;
+        }
+        

@@ -1,0 +1,65 @@
+/* 地标页面上传js */
+.uploadImgGroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uploadImgBtn {
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+    position: relative;
+    background: url("../img/imgUpload.png") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-color: #fdfdfd;
+    border: 2px dashed #ddd;
+}
+
+.uploadImgBtn .uploadImg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.uploadImgBtn .pic {
+    width: 100px;
+    height: 100px;
+}
+
+.uploadImgBtn .pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.uploadImgBtn .icon-del {
+    position: relative;
+    top: -20px;
+    left: 175px;
+    width: 40px;
+    height: 40px;
+    background: #6361619e;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    line-height: 40px;
+    border-radius: 50%;
+    display: none;
+
+}
+
+.uploadImgBtn.del .icon-del {
+    display: block;
+}
+.tishiwenzi {
+    font-size: 2rem;
+    text-align: center;
+    background-color: azure;
+}

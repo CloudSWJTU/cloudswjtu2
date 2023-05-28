@@ -1,0 +1,73 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+<form class="layui-form" action="" method="post" enctype="multipart/form-data">
+
+    <input type="text" value="{{ row.id }}" name="id" hidden>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">图片</label>
+    <div class="layui-input-block">
+      <input type="file" name="image" placeholder="请输入社团名称" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+      <div class="layui-form-item">
+    <label class="layui-form-label">内容</label>
+   <div class="layui-input-block">
+      <textarea name="content" placeholder="请输入内容" class="layui-textarea">{{ row.content }}</textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">内容</label>
+   <div class="layui-input-block">
+      <textarea name="content" placeholder="请输入内容" class="layui-textarea">{{ row.content }}</textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">是否优先</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="is_prioity" lay-skin="switch" lay-text="是|否"
+
+       {% if row.is_prioity==1 %}
+          checked
+
+      {% endif %}>
+    </div>
+
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">是否有特殊含义</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="is_meaning"  lay-skin="switch" lay-text="是|否"
+      {% if row.is_meaning==1 %}
+          checked
+
+      {% endif %}
+      >
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">是否合规</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="is_compliance"  lay-skin="switch" lay-text="是|否"
+       {% if row.is_compliance==1 %}
+          checked
+
+      {% endif %}>
+    </div>
+  </div>
+
+
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">
+          {% if row %}
+            修改
+              {% else %}
+              添加
+          {% endif %}
+          </button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

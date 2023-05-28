@@ -1,0 +1,1306 @@
+{% extends 'base.html' %}
+{% block header %}
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <!-- 引入bootstrap文件 -->
+  <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/lxr_index.css">
+  <link rel="stylesheet" href="../static/css/lxr_base.css">
+  <link rel="stylesheet" href="../static/css/navstyle.css">
+  <link rel="stylesheet" href="../static/css/shangchuan-dibiao.css">
+  <link rel="stylesheet" href="../static/css/background.css">
+{#  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">#}
+  <script src="./bootstrap/jQuery/jquery-3.6.1.js"></script>
+  <script type="text/javascript" src="../static/js/lxr_imgUpload.js"></script>
+
+  <!-- 引入myjs文件 -->
+  <!-- 引入bootstrapjavascript文件 -->
+  <script src="../static/js/animate.js"></script>
+  <script src="../static/js/lxr_myjavascript.js"></script>
+  <script src="../static/bootstrap/jQuery/jquery-3.6.1.js"></script>
+  <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+
+{% endblock %}
+{% block content %}
+      <div class="zhankongjian"></div>
+  <!-- 顶层导航栏end -->
+  <!-- 主体部分 -->
+  <div class="container-fluid main">
+    <div class="row">
+      <!-- 右侧导航栏start -->
+      <div class="col-md-2  hidden-sm hidden-xs nav">
+        <!-- 上箭头部分 -->
+        <div class="shangla">
+          <span class="glyphicon glyphicon-chevron-up shangla1"></span>
+        </div>
+        <!-- 上箭头部分结束 -->
+        <!-- 导航栏部分 -->
+        <div class="nav1">
+          <ul class="list1">
+            <li class="no1">
+              <div class="no1_1" onclick="open1()">
+                <img class="xtp1" src="../static/img/jc-2.JPG" alt="图片"></img>
+                机车博物馆
+              </div>
+              <div class="no1_2" onclick="open2()">
+                <img class="xtp2" src="../static/img/7-1.JPG" alt="图片"></img>
+                7号教学楼
+              </div>
+              <div class="no1_3" onclick="open3()">
+                <img class="xtp3" src="../static/img/1-1.JPG" alt="图片"></img>
+                1号教学楼
+              </div>
+              <div class="no1_4" onclick="open4()">
+                <img class="xtp4" src="../static/img/6-1.JPG" alt="图片"></img>
+                6号教学楼
+              </div>
+              <div class="no1_5" onclick="open5()">
+                <img class="xtp5" src="../static/img/5-1.JPG" alt="图片"></img>
+                5号教学楼
+              </div>
+            </li>
+            <li class="no2">
+              <div class="no2_1" onclick="open6()">
+                <img class="xtp1" src="../static/img/2-1.JPG" alt="图片"></img>
+                2号教学楼
+              </div>
+              <div class="no2_2" onclick="open7()">
+                <img class="xtp2" src="../static/img/xh-1.jpg" alt="图片"></img>
+                犀湖
+              </div>
+              <div class="no2_3" onclick="open8()">
+                <img class="xtp3" src="../static/img/3-1.JPG" alt="图片"></img>
+                3号教学楼
+              </div>
+              <div class="no2_4" onclick="open9()">
+                <img class="xtp4" src="../static/img/4-1.JPG" alt="图片"></img>
+                4号教学楼
+              </div>
+              <div class="no2_5" onclick="open10()">
+                <img class="xtp5" src="../static/img/9-1.JPG" alt="图片"></img>
+                9号教学楼
+              </div>
+            </li>
+            <li class="no3">
+              <div class="no3_1" onclick="open11()">
+                <img class="xtp1" src="../static/img/tsg-1.jpg" alt="图片"></img>
+                图书馆
+              </div>
+              <div class="no3_2" onclick="open12()">
+                <img class="xtp2" src="../static/img/11-1.JPG" alt="图片"></img>
+                交运楼
+              </div>
+              <div class="no3_3" onclick="open13()">
+                <img class="xtp3" src="../static/img/10-1.JPG" alt="图片"></img>
+                电气馆
+              </div>
+              <div class="no3_4" onclick="open14()">
+                <img class="xtp4" src="../static/img/8-1.JPG" alt="图片"></img>
+                2号教学楼
+              </div>
+              <div class="no3_5" onclick="open15()">
+                <img class="xtp5" src="../static/img/tyc-1.JPG" alt="图片"></img>
+                北区体育场
+              </div>
+            </li>
+            <li class="no4">
+              <div class="no4_1" onclick="open16()">
+                <img class="xtp1" src="../static/img/dd-3.JPG" alt="图片"></img>
+                扬华大道
+              </div>
+              <div class="no4_2" onclick="open17()">
+                <img class="xtp2" src="../static/img/hq-1.jpg" alt="图片"></img>
+                虹桥
+              </div>
+              <div class="no4_3" onclick="open18()">
+                <img class="xtp3" src="../static/img/nm-1.JPG" alt="图片"></img>
+                南门
+              </div>
+              <div class="no4_4" onclick="open19()">
+                <img class="xtp4" src="../static/img/qiang-1.jpg" alt="图片"></img>
+                竢实扬华墙
+              </div>
+              <div class="no4_5" onclick="open20()">
+                <img class="xtp5" src="../static/img/d1-1.JPG" alt="图片"></img>
+                刘恢先&孙中山像
+              </div>
+            </li>
+            <li class="no5">
+              <div class="no5_1" onclick="open21()">
+                <img class="xtp1" src="../static/img/d2-1.JPG" alt="图片"></img>
+                林同炎纪念像
+              </div>
+              <div class="no5_2" onclick="open22()">
+                <img class="xtp2" src="../static/img/d3-1.JPG" alt="图片"></img>
+                严恺先生纪念像
+              </div>
+              <div class="no5_3" onclick="open23()">
+                <img class="xtp3" src="../static/img/d4-1.JPG" alt="图片"></img>
+                张维先生纪念像
+              </div>
+              <div class="no5_4" onclick="open24()">
+                <img class="xtp4" src="../static/img/d5-1.JPG" alt="图片"></img>
+                方俊先生纪念像
+              </div>
+              <div class="no5_5" onclick="open25()">
+                <img class="xtp5" src="../static/img/0-1.jpg" alt="图片"></img>
+                ......
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- 导航栏部分结束 -->
+        <!-- 下箭头部分 -->
+        <div class="xiala">
+          <span class="glyphicon glyphicon-chevron-down xiala1"></span>
+        </div>
+        <!-- 下箭头部分结束 -->
+      </div>
+      <!-- 右侧导航栏end -->
+      <!-- 图片部分 -->
+      <div class="col-md-10 col-sm-12 col-xs-12 tupian">
+        <img class="ditu img-responsive center-block" src="../static/img/image1.png" alt="1">
+        <!-- 地址 -->
+        <span class="glyphicon glyphicon-map-marker db1" onclick="open1()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db2" onclick="open2()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db3" onclick="open3()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db4" onclick="open4()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db5" onclick="open5()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db6" onclick="open6()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db7" onclick="open7()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db8" onclick="open8()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db9" onclick="open9()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db10" onclick="open10()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db11" onclick="open11()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db12" onclick="open12()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db13" onclick="open13()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db14" onclick="open14()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db15" onclick="open15()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db16" onclick="open16()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db17" onclick="open17()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db18" onclick="open18()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db19" onclick="open19()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db20" onclick="open20()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db21" onclick="open21()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db22" onclick="open22()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db23" onclick="open23()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db24" onclick="open24()">
+        </span>
+        <span class="glyphicon glyphicon-map-marker db25" onclick="open25()">
+        </span>
+      </div>
+      <!-- 图片部分end -->
+    </div>
+  </div>
+  </div>
+
+  <!-- 弹出图 1-->
+  <div id="db01" class="db001">
+    <div id="myCarousel" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn01" onclick="close1()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/jc-1.JPG" alt="First slide">
+          <div class="carousel-caption">机车博物馆远景</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/jc-2.JPG" alt="Second slide">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/jc-3.JPG" alt="Third slide">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/jc-4.JPG" alt="Fourth slide">
+          <div class="carousel-caption"></div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图1end -->
+  <!-- 弹出图2 -->
+  <div id="db02" class="db002">
+    <div id="myCarousela" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn02" onclick="close2()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousela" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousela" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/7-1.JPG" alt="First slide">
+          <div class="carousel-caption">7教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/7-2.JPG" alt="Second slide">
+          <div class="carousel-caption">7号教学楼为实验教学楼，建筑面积10069平方米。主要用于教学、
+            科研与实验。设置有普通教室、专用教室和相应的办公用房，主要用于计算机基础教学实验。
+            楼宇内庭院布置有实木平台和碎拼小路，庭院草坪上种植有棕榈、桂花等树种，景观尺度感好、
+            参与性强。
+          </div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarousela" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousela" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图2end -->
+  <!-- 弹出图3 -->
+  <div id="db03" class="db003">
+    <div id="myCarouselb" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn03" onclick="close3()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselb" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselb" data-slide-to="1"></li>
+        <li data-target="#myCarouselc" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/1-1.JPG" alt="First slide">
+          <div class="carousel-caption">1教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/1-2.jpg" alt="Second slide">
+          <div class="carousel-caption">1号教学楼为犀浦校区的主要教学楼，建筑面积38162平方米。
+            主要安排各类公共教室及与基础课相关的院系办公用房。该教学楼平面布局为“A”字形，有“楼中楼”之称。
+            楼内有两个内庭院落，景观精心雕琢，空间合理，个性突出，植物景观高低错落，碎石小路穿插其间，
+            学生信步于此，倍感幽静、惬意，是读书、交流的理想空间。同时，1号教学楼西侧还有“外语沙龙”，
+            是平时交流外语、自习的绝佳场所。
+          </div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/1-3.jpg" alt="Third slide">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="left carousel-control" href="#myCarouselb" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarouselb" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+  <!-- 弹出图3end -->
+  <!-- 弹出图4 -->
+  <div id="db04" class="db004">
+    <div id="myCarouselc" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn04" onclick="close4()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselc" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselc" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/6-1.JPG" alt="First slide">
+          <div class="carousel-caption">6号教学楼为“口”字型，总建筑面积为24986平方米。
+            6号教学楼为实验教学楼，主要用于基础实验教学、
+            实习，楼内配有相应的办公用房。楼宇内庭院为精致的绿化景观。
+          </div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/6-2.JPG" alt="Second slide">
+          <div class="carousel-caption">6教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/6-3.JPG" alt="Second slide">
+          <div class="carousel-caption">6教</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselc" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselc" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图4end -->
+  <!-- 弹出图5 -->
+  <div id="db05" class="db005">
+    <div id="myCarouseld" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn05" onclick="close5()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouseld" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouseld" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/5-1.JPG" alt="First slide">
+          <div class="carousel-caption">5教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/5-2.JPG" alt="Second slide">
+          <div class="carousel-caption">5教</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouseld" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouseld" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图5end -->
+  <!-- 弹出图6 -->
+  <div id="db06" class="db006">
+    <div id="myCarousele" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn06" onclick="close6()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousele" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousele" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/2-1.jpg" alt="First slide">
+          <div class="carousel-caption">2教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/2-2.jpg" alt="Second slide">
+          <div class="carousel-caption">2号教学楼建筑面积约36500平方米。设置普通教室和阶梯教室，
+            有相应的办公配套用房，主要用于基础教学。该楼同样为平面“A”字形布局，丰富的植物搭配和
+            精致的小庭院景观设计为楼宇内庭增添了许多生活气息。
+          </div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarousele" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousele" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图6end -->
+  <!-- 弹出图7 -->
+  <div id="db07" class="db007">
+    <div id="myCarouself" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn07" onclick="close7()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouself" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouself" data-slide-to="1"></li>
+        <li data-target="#myCarouself" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/xh-1.jpg" alt="First slide">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/xh-2.JPG" alt="Second slide">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/xh-3.JPG" alt="Third slide">
+          <div class="carousel-caption"></div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouself" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouself" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图7end -->
+  <!-- 弹出图8 -->
+  <div id="db08" class="db008">
+    <div id="myCarouselg" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn08" onclick="close8()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselg" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselg" data-slide-to="1"></li>
+        <li data-target="#myCarouselg" data-slide-to="2"></li>
+        <li data-target="#myCarouselg" data-slide-to="3"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/3-1.jpg" alt="First slide">
+          <div class="carousel-caption">3教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/3jiao_self.jpg" alt="Second slide">
+          <div class="carousel-caption">3教远景</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/3-2.jpg" alt="Third slide">
+          <div class="carousel-caption">3教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/3-3.jpg" alt="Fourth slide">
+          <div class="carousel-caption">3教内景</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselg" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselg" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图8end -->
+  <!-- 弹出图9 -->
+  <div id="db09" class="db009">
+    <div id="myCarouselh" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn09" onclick="close9()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselh" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselh" data-slide-to="1"></li>
+        <li data-target="#myCarouselh" data-slide-to="2"></li>
+        <li data-target="#myCarouselh" data-slide-to="3"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/4-1.JPG" alt="First slide">
+          <div class="carousel-caption">4教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/4-2.JPG" alt="Second slide">
+          <div class="carousel-caption">4号教学楼也称“土木馆”，它位于犀浦校区的中心教学区，
+            也是犀浦校区建筑面积最大的教学楼，达42060平方米。该建筑地上五层，地下一层。主要包括土木、
+            电气类学科专业基础课实验室及部分基础实验室、公共多媒体教室、院系办公室、会议室、教授工作室和展厅。
+            4号教学楼由我校建筑学院的林青教授设计。
+          </div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/xiaoshiguan_self.jpg" alt="Third slide">
+          <div class="carousel-caption">校史馆
+          </div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/4-3.JPG" alt="Fourth slide">
+          <div class="carousel-caption"></div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselh" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselh" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图9end -->
+  <!-- 弹出图10 -->
+  <div id="db0_10" class="db0010">
+    <div id="myCarouseli" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn10" onclick="close10()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouseli" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouseli" data-slide-to="1"></li>
+        <li data-target="#myCarouseli" data-slide-to="2"></li>
+        <li data-target="#myCarouseli" data-slide-to="3"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/9-1.JPG" alt="First slide">
+          <div class="carousel-caption">9教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/9-2.JPG" alt="Second slide">
+          <div class="carousel-caption">九号教学楼，以砖红色为整栋楼的主基调，不同于我校的其他教学楼，
+            九号教学楼的设计新颖独特。楼的中间是露天的通道与草地，为学生在学习之余带来了一抹放松与愉悦。
+            每层楼的室外走廊都能够感受到清新的空气与明媚的阳光。这栋教学楼是信息科学与技术学院和利兹学院的主要办学地点。
+          </div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/9-3.JPG" alt="Third slide">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/9-4.JPG" alt="Third slide">
+          <div class="carousel-caption"></div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouseli" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouseli" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图10end -->
+  <!-- 弹出图11 -->
+  <div id="db0_11" class="db0011">
+    <div id="myCarouselj" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn11" onclick="close11()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselj" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselj" data-slide-to="1"></li>
+        <li data-target="#myCarouselj" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/tsg-1.jpg" alt="First slide">
+          <div class="carousel-caption">图书馆远景</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/tsg-2.jpg" alt="Second slide">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/tsg-3.jpg" alt="Third slide">
+          <div class="carousel-caption"></div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselj" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselj" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图11end -->
+  <!-- 弹出图12 -->
+  <div id="db0_12" class="db0012">
+    <div id="myCarouselk" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn12" onclick="close12()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselk" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselk" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/11-1.JPG" alt="First slide">
+          <div class="carousel-caption">交运楼</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/11-2.JPG" alt="Second slide">
+          <div class="carousel-caption">交运楼</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselk" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselk" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图12end -->
+  <!-- 弹出图13 -->
+  <div id="db0_13" class="db0013">
+    <div id="myCarousell" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn13" onclick="close13()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousell" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousell" data-slide-to="1"></li>
+        <li data-target="#myCarousell" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/10-1.JPG" alt="First slide">
+          <div class="carousel-caption">电气馆</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/10-2.JPG" alt="Second slide">
+          <div class="carousel-caption">电气馆</div>
+        </div>
+        <div class="item">
+          <img class="cjy1" decoding="async" src="../static/img/10-3.JPG" alt="Third slide">
+          <p id="d6-1" class="wz">
+            曹建猷（1917年5月19日~1997年9月19日），湖南长沙人，铁道电气化专家。西南交通大学教授。
+            铁道牵引电气化与自动化学科的创始人。1940年毕业于交通大学 ，1950年获美国麻省理工学院博士学位，
+            1980当选为中国科学院院士（学部委员）。
+            曹建猷长期从事铁道电气化与计算机科学的教学和研究，铁道牵引电气化与自动化学科的创始人。
+            对确定中国电气化铁道供电制度及电气化铁道的发展作出了重要贡献，被誉为中国铁路电气化奠基人。
+            <a href="https://baike.baidu.com/link?url=xKOVbp-kIOWjnzl_-yrGdbgXQSm0Tv19g2e0nW2ZaaI_siYkTllHSD1ZEtOhodp4dU91jZYJ9Sd8zfw_WQe3jFDJ-S1_7ls3k3NegIIdWYzIQ56SJVCPTxnR-FPR6kvx"
+              target="_blank">
+              点击查看详细信息
+            </a>
+          </p>
+          <div class="carousel-caption">曹建猷院士纪念像</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarousell" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousell" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图13end -->
+  <!-- 弹出图14 -->
+  <div id="db0_14" class="db0014">
+    <div id="myCarouselm" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn14" onclick="close14()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselm" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselm" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/8-1.JPG" alt="First slide">
+          <div class="carousel-caption">8教</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/8-2.JPG" alt="Second slide">
+          <div class="carousel-caption">位于浙湖旁边这栋设计优美的建筑是我校犀浦校区的八号教学楼，
+            也是我校的建筑馆。八号教学楼作为建筑与设计学院的主要办学地点，有教学、科研空间三万余平方米。
+            他的整体设计优美大气，走进楼内，也能感受到浓厚的艺术氛围。许多学生设计的作品摆放在楼内的不同位置，
+            提高了整座教学楼的艺术美感。
+          </div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselm" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselm" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图14end -->
+  <!-- 弹出图15 -->
+  <div id="db0_15" class="db0015">
+    <div id="myCarouseln" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn15" onclick="close15()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouseln" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouseln" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/tyc-1.JPG" alt="First slide">
+          <div class="carousel-caption">北区体育场</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/tyc-2.JPG" alt="Second slide">
+          <div class="carousel-caption">北区体育场</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouseln" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouseln" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图15end -->
+  <!-- 弹出图16 -->
+  <div id="db0_16" class="db0016">
+    <div id="myCarouselo" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn16" onclick="close16()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselo" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselo" data-slide-to="1"></li>
+        <li data-target="#myCarouselo" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/dd-1.JPG" alt="First slide">
+          <div class="carousel-caption">飞碟体育馆</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/dd-2.JPG" alt="Second slide">
+          <div class="carousel-caption">堂吉诃德像</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/dd-3.JPG" alt="Third slide">
+          <div class="carousel-caption">扬华大道</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselo" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselo" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图16end -->
+  <!-- 弹出图17 -->
+  <div id="db0_17" class="db0017">
+    <div id="myCarouselp" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn17" onclick="close17()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselp" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselp" data-slide-to="1"></li>
+        <li data-target="#myCarouselp" data-slide-to="2"></li>
+        <li data-target="#myCarouselp" data-slide-to="3"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/hq-1.jpg" alt="First slide">
+          <div class="carousel-caption">虹桥</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/hq-2.jpg" alt="Second slide">
+          <div class="carousel-caption">虹桥夜景</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/hq-3.jpg" alt="Third slide">
+          <div class="carousel-caption">虹桥夜景</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/hq-4.jpg" alt="Fourth slide">
+          <div class="carousel-caption">虹桥</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselp" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselp" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图17end -->
+  <!-- 弹出图18 -->
+  <div id="db0_18" class="db0018">
+    <div id="myCarouselq" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn18" onclick="close18()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselq" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselq" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/nm-1.JPG" alt="First slide">
+          <div class="carousel-caption">南门</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/nm-1.JPG" alt="Second slide">
+          <div class="carousel-caption">西南交通大学犀浦校区的南大门坐落于学校的最南端，是我校人文景观线的起点。
+            南大门由唐山市政府出资建成，它的设计传承了唐山时期老校门的欧式风格，既保留了老唐院时期的古朴、亲切感，
+            又采用了新材料、新设计，焕发出时代感。大门的正面是由毛主席亲笔题写的“交通大学”四个大字，
+            背面是我校老唐院时期的校名“唐山路矿学堂”，前交通、后唐山寓意的是传承历史，展望未来。
+          </div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselq" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselq" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div id="db0_19" class="db0019">
+    <div id="myCarouselr" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn19" onclick="close19()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselr" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselr" data-slide-to="1"></li>
+        <li data-target="#myCarouselr" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/qiang-1.jpg" alt="First slide">
+          <div class="carousel-caption">“竢实扬华”校史浮雕墙</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/qiang-2.JPG" alt="Second slide">
+          <div class="carousel-caption">2006年，交大举行110周年校庆，北京校友会为母校捐建了这座浮雕墙
+            。墙上“竢实扬华”四个大字是对学校百余年来精神内核的凝练总结。
+            四个大字周围以高低错落的浮雕呈现出了交大在山海关、唐山、贵州、峨眉、成都五个时期的校门。
+            浮雕墙正上方是学校校徽，由半透明材质制成；
+            右上角有四只和平鸽，形似数字“110”，表示浮雕墙是为纪念交大110周年校庆而建；
+            左侧的玻璃展框里是一张石刻的毕业证书，右侧是西南交通大学校歌，
+          </div>
+        </div>
+        <div class="item">
+          <img decoding="async" src="../static/img/qiang-3.JPG" alt="Second slide">
+          <div class="carousel-caption">浮雕墙背面记载了交大数次搬迁校址的艰辛历程，并嵌有各时期的校章，
+            从中可以觅得几分校徽的影子。左侧是《交大颂》，意在颂扬交大先辈力争上游的奋斗精神；
+            右侧“交大历史沿革”记载了交大百余年的风雨之路，警示今天的学子们应珍惜来之不易的求学机会。
+          </div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselr" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselr" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div id="db0_20" class="db0020">
+    <div id="myCarousels" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <div class="containerbtn20" onclick="close20()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousels" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousels" data-slide-to="1"></li>
+        <li data-target="#myCarousels" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/d1-1.JPG" alt="First slide">
+          <div class="carousel-caption">刘恢先纪念像</div>
+        </div>
+        <div class="item">
+          <img class="lhx1" decoding="async" src="../static/img/d1-2.JPG" alt="Second slide">
+          <p id="d1-1" class="wz">
+            刘恢先（1912.10.18-1992.6.24）江西省莲花县人，
+            结构工程与地震工程专家， [1-2] 中国地震工程学的奠基人之一、
+            被称之为世界地震工程之父。
+            1933年毕业于交通大学唐山工学院（现西南交通大学），
+            1937年获美国康奈尔大学博士学位，
+            1952年创建中国科学院工程力学研究所，
+            同年加入九三学社，1980年当选为中国科学院院士。
+            刘恢先长期致力于地震工程学和工程力学的研究，
+            推动了中国地震工程学的发展，
+            他创建并领导了中国第一个地震工程研究中心，
+            做出了开拓性的成果，
+            20世纪60年代就设立专门的课题组并兼任组长，
+            研究地震波传播理论在地震工程中的应用。
+            这方面的研究成果，例如波在离散模型中传播的透射边界法、
+            处理波散射问题的复变函数方法等。
+            <a href="https://baike.baidu.com/link?url=xQva6TliY3MrgsGQL0NyI1RyNSViA-tMot0i7C-G_HJFPUpk4YjTwCT6T9vUUQLuF3IdaAaHlGHujEFN_wZica--JWPhzJd2UVtzaMuljyTe8DzxOyk7zzz9e2r3OlUA"
+              target="_blank">
+              点击查看详细信息
+            </a>
+          </p>
+          <div class="carousel-caption">刘恢先简介</div>
+        </div>
+        <div class="item">
+          <img class="szs1" decoding="async" src="../static/img/d1-3.jpg" alt="Third slide">
+          <p id="d1-2" class="wz">
+            孙中山（1866年11月12日-1925年3月12日），名文，字载之，号日新，
+            又号逸仙，又名帝象，化名中山樵，伟大的民族英雄、伟大的爱国主义者、
+            中国民主革命的伟大先驱 ，中华民国和中国国民党的缔造者，三民主义的倡导者，
+            创立了《五权宪法》。他首举彻底反帝反封建的旗帜，“起共和而终两千年封建帝制”。
+            <a href="https://baike.baidu.com/link?url=azmDQpNhGsqc_MtCyADXq8e9hNh_fy24tCDLQA85nf39kTTO0p8OhppswuKcfzn6GmJLCcaYII5lNTTrO-tDCVpXuTc_72iak6Zt2VLpu2EF6NzJC4SYXaPsAQG3a7Gb"
+              target="_blank">
+              点击查看详细信息
+            </a>
+          </p>
+
+          <div class="carousel-caption">孙中山先生简介</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarousels" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousels" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div id="db0_21" class="db0021">
+    <div id="myCarouselt" class="carousel slide">
+      <!-- 轮播（Carousl）指标 -->
+      <div class="containerbtn21" onclick="close21()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselt" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselt" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/d2-1.JPG" alt="First slide">
+          <div class="carousel-caption">林同炎纪念像</div>
+        </div>
+        <div class="item">
+          <img class="lty1" decoding="async" src="../static/img/d2-2.JPG" alt="Second slide">
+          <p id="d2-1" class="wz">
+            林同炎（1912年11月14日—2003年11月15日），出生于中国福建福州市，美国国籍，土木工程学家，
+            美国国家工程院院士、台湾“中央研究院”院士、中国科学院外籍院士，加利福尼亚大学伯克利分校终身荣誉教授 。
+            1931年林同炎从唐山交通大学毕业后前往美国加利福尼亚大学伯克利分校土木工程系读硕士研究生；1933年获得硕士学位后回国，
+
+            <a href="https://baike.baidu.com/link?url=lRsjXEwcktL_P7IGuBZ9ni-xeb4Yp6PRWFBc_zbElyJCLNSPV_u_RUGYJIGYj4kTrB1RbCEGpF9V8lVZEtfaATRiKgxcPqlJg8ghqg0Ib0kgopbGSe3NNcqu15C4e9HS"
+              target="_blank">
+              点击查看详细信息
+            </a>
+          </p>
+          </a>
+          <div class="carousel-caption">林同炎简介</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselt" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselt" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div id="db0_22" class="db0022">
+    <div id="myCarouselu" class="carousel slide">
+      <!-- 轮播（Carousl）指标 -->
+      <div class="containerbtn22" onclick="close22()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselu" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselu" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/d3-1.JPG" alt="First slide">
+          <div class="carousel-caption">严恺先生纪念像</div>
+        </div>
+        <div class="item">
+          <img class="yk1" decoding="async" src="../static/img/d3-2.JPG" alt="Second slide">
+          <p id="d3-1" class="wz">
+            严恺（1912.8.10--2006.5.7），祖籍福建闽侯，一级教授，
+            中国科学院、中国工程院、墨西哥科学院三冕院士，九三学社社员 ，
+            世界著名的水利海岸工程学家。河海大学创始人、校长、名誉校长，
+            水利部交通部南京水利科学研究院名誉院长，中国水利学会名誉理事长，
+            中国海洋学会名誉理事长。1933年毕业于交通大学唐山工学院（现西南交通大学）。
+
+
+            <a href="https://baike.baidu.com/link?url=xr3JbRzyXIOIRQFR7MqQNPNR-EpWoLZ-kZCYxnYc9WWU4gnfUdGgWWeX2eBv34hAyqjW-RtMEIyecrLGg5zJxRVARYH8l9dSEto406PHOFW"
+              target="_blank">
+              点击查看详细信息
+            </a>
+          </p>
+          <div class="carousel-caption">严恺先生简介</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselu" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselu" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div id="db0_23" class="db0023">
+    <div id="myCarouselv" class="carousel slide">
+      <!-- 轮播（Carousl）指标 -->
+      <div class="containerbtn22" onclick="close23()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselv" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselv" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/d4-1.JPG" alt="First slide">
+          <div class="carousel-caption">张维先生纪念像</div>
+        </div>
+        <div class="item">
+          <img class="zw1" decoding="async" src="../static/img/d4-2.JPG" alt="Second slide">
+          <p id="d4-1" class="wz">
+            张维（1913.05.22 - 2001.10.04），北京市人，固体力学家、
+            结构力学和工程教育专家。1933年毕业于唐山交通大学获工学士学位，1938年获英国伦敦帝国理工学院工学硕士学位，1944年获德国柏林
+            高等工业学校工程博士学位，同年在国际首次求得环壳
+            在旋转对称载荷下的应力状态的渐近解。1956年加入
+            中国共产党，1994年选聘为中国工程院院士，1983年创办深圳大学，
+            1955年选聘为中国科学院院士。
+            <a href="https://baike.baidu.com/link?url=sq2ZsrBV7-vcT1Vo8Gex3Q9LfNWYTc4i5hq9BJ_fMUtVZACyI4dLpNQEVXniqUTJASmx3Bxmu5ioPsjPg_ukXjOxTssxGBj_lfleGfXgY7y"
+              target="_blank">
+              点击查看详细信息
+            </a>
+          </p>
+          <div class="carousel-caption">张维先生简介</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselv" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselv" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div id="db0_24" class="db0024">
+    <div id="myCarouselw" class="carousel slide">
+      <!-- 轮播（Carousl）指标 -->
+      <div class="containerbtn24" onclick="close24()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselw" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselw" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src="../static/img/d5-1.JPG" alt="First slide">
+          <div class="carousel-caption">方俊先生纪念像</div>
+        </div>
+        <div class="item">
+          <img class="fj1" decoding="async" src="../static/img/d5-2.JPG" alt="Second slide">
+          <p id="d5-1" class="fj">
+            方俊（1904.10.26-1998.5.5），字君选，江苏武进人，大地测量与地球物理学家，
+            中国大地重力学和地球形状学的创始人，固体潮研究的开拓者。
+            1923年唐山交通大学肄业，1957年4月加入中国共产党，1980年当选为中国科学院院士。
+
+            <a href="https://baike.baidu.com/item/%E6%96%B9%E4%BF%8A/36929?fr=aladdin" target="_blank">
+              点击查看详细信息
+            </a>
+          </p>
+          <div class="carousel-caption">方俊先生简介</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselw" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselw" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div id="db0_25" class="db0025">
+    <div id="myCarouselx" class="carousel slide">
+      <!-- 轮播（Carousl）指标 -->
+      <div class="containerbtn25" onclick="close25()">
+        <button type="button" class="btn btn-danger">X</button>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouselx" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselx" data-slide-to="1"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img decoding="async" src=".../static/img/0-1.jpg" alt="First slide">
+          <div class="carousel-caption">期待您的投稿</div>
+        </div>
+        <div class="item">
+          <img decoding="async" src=".../static/img/0-2.jpg" alt="Second slide">
+          <div class="carousel-caption">期待您的投稿</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#myCarouselx" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouselx" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- 弹出图18end -->
+  <!-- 弹出图 -->
+  <!-- 上传模块 -->
+  <div class="dbshangchuancenter">
+    <div class="schz">
+      <div class="tishiwenzi">点击此处，记录您的最美交大风景！</div>
+      <div id="file1"></div>
+    </div>
+    <a href="https://map.baidu.com/@11577175.92,3580389.63,21z,87t,-142.19h#panoid=09019200121904091346580679M&panotype=street&heading=142.18&pitch=0&l=21&tn=B_NORMAL_MAP&sc=0&newmap=1&shareurl=1&pid=09019200121904091346580679M"
+      class="yunyou" target="_blank">
+      <button type="button" class="btn btn-success">开启您的云游交大之旅！</button>
+    </a>
+  </div>
+    <div class="row">
+    <div class="col-sm-12" style="text-align: center;margin-top: 20px">
+            <a class="btn-primary btn" style="margin:0 auto" href="/landmark/message/list">开始留言</a>
+
+    </div>
+    </div>
+
+
+{% endblock %}
+
+
+  <!-- 预先加载插件 -->
+{#  <script src="/static/js/instantclick.min.js" data-no-instant></script>#}
+{#  <script data-no-instant>InstantClick.init();</script>#}
+</body>
+
+</html>

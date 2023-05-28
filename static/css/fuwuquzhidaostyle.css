@@ -1,0 +1,143 @@
+/* 服务区指导部分css */
+body {
+	position: relative;
+	background-image: url("/img/background3.jpg");
+	background-repeat: repeat repeat;
+	background-size: auto auto;
+}
+.gridbox{
+	display: grid;
+}
+.fuwuqu_contentbox{
+	border-radius: 25px;
+	position: relative;
+	margin: 5%;
+	padding-bottom: 10%;
+	top: 2vw;
+	background-color: rgba(14,13,13,0.1);
+	height: auto;
+	width: 90%;
+}
+.fuwuqu_contentgridbox{
+	display: grid;
+	left:5%;
+	top: 5vw;
+	position: relative;
+	width: 90%;
+	grid-template-rows: auto auto auto;
+	row-gap: 10px;
+}
+.fuwuqu_contentgridbox div{
+	position: relative;
+	left: 4vw;
+	width:90%; 
+}
+.fuwuqu_contentgridbox .kuaidi{
+	text-align: center;
+	background-color: rgba(236, 197, 197,0.5);
+	grid-template-rows: repeat(2,50%);
+}
+.fuwuqu_contentgridbox .kuaidi .kuaidibox{
+	background-color: rgba(255, 255, 255, 0.466);
+}
+.fuwuqu_contentgridbox .kuaidi .kuaidibox h3{
+	font-size: 2vw;
+}
+.kuaidi .kuaidibox .yizhan{
+	display: flex;
+	position: relative;
+	left: -0.9vw;
+	justify-content: center;
+	justify-items: center;
+}
+ .yizhanimg{
+	overflow: hidden;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	background-color: rgba(211, 201, 201, 0.201);
+}
+ .yizhanimg img{
+	width: 15vw;
+	height: 90%;
+}
+.fuwuqu_contentgridbox .meishi{
+
+	background-color: rgba(24, 229, 212, 0.274);
+	grid-template-rows: auto auto auto auto;
+}
+.meishi h2{
+	font-style: italic;
+	font-size: 2vw;
+	height: 40px;
+	position: relative;
+	width: 30%;
+	left: 45%
+}
+.tupianzhanshi {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	top: 20px;
+	margin-bottom: 30px;
+	right: 30px;
+	border: solid white 2px;
+
+}
+.tupianzhanshi  .innerphoto{
+	height:fit-content;
+	width: fit-content;
+	border-radius: 25px;
+	position: relative;
+	overflow: hidden;
+	border: solid black 1px;
+	margin: 4%;
+}
+.tupianzhanshi  .innerphoto img{
+	position: relative;
+	top: 5%;
+	float: left;
+	min-width: 4vw;
+	max-width: 20vw;
+	max-height: 40vw;
+
+}
+.fuwuqu_contentgridbox .meishi .meishiinnerbox{
+	text-align: center;
+	width: 95%;
+	height: auto;
+}
+.fuwuqu_contentgridbox .meishi .meishiinnerbox h3{
+	font-size: 2vw;
+	background-color: azure;
+	width: 95%;
+}
+.fuwuqu_contentgridbox .meishi .meishiinnerbox video{
+	position: relative;
+	width: 80%;
+}
+.fuwuqu_contentgridbox .meishi .meishiinnerbox .fenxiangbox{
+	justify-content:start;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.fenxiangbox div img{
+	position: absolute;
+	top: 30%;
+	height: 70%;
+}
+.fuwuqu_contentgridbox .xiaoyuanfuwu{
+	overflow: hidden;
+
+	position: relative;
+	background-color: rgba(204, 222, 45, 0.221);
+	float: left;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.fuwuqu_contentgridbox .xiaoyuanfuwu img{
+	height:600px;
+	min-width: 20%;
+	margin-right: 20px;
+	border: 25px;
+}

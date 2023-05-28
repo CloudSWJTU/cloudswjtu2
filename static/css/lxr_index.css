@@ -1,0 +1,665 @@
+/* 地标部分css */
+.title {
+    height: 100px;
+    background-color: #1071a8;
+}
+
+/* .body {
+    background-image: url("../img/background3.jpg");
+} */
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.6;
+    opacity: .60;
+    filter: alpha(opacity=60);
+}
+
+.main {
+    margin-top: 10vw;
+}
+
+/* 导航栏部分 */
+/* .nav {
+    position: relative;
+    height: 660px;
+    overflow: hidden;
+} */
+.nav1 {
+    position: relative;
+    margin-left: 0px !important;
+    overflow: hidden;
+}
+
+.shangla {
+    height: 15px;
+    margin-left: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.shangla:hover {
+    background-color: #1071a8;
+}
+
+.shangla1 {
+    position: absolute;
+    left: 50%;
+    cursor: pointer;
+}
+
+.xiala {
+    height: 15px;
+    margin-left: 40px !important;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.xiala:hover {
+    background-color: #1071a8;
+}
+
+.xiala1 {
+    margin: 0 auto;
+    left: 45%;
+    cursor: pointer;
+}
+
+.nav ul {
+    margin-bottom: 0;
+}
+
+.list1 {
+    position: absolute;
+    margin-left: 40px !important;
+    top: 1%;
+    /* overflow: hidden; */
+
+}
+div[class^=no] {
+    background-image: url("../img/background3.jpg");
+}
+
+
+.no1_1 {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+.no1_1:hover {
+    transform: translateX(-15px);
+}
+
+.no1_2 {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+.no1_2:hover {
+    transform: translateX(-15px);
+}
+
+.no1_3 {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+.no1_3:hover {
+    transform: translateX(-15px);
+}
+
+.no1_4 {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+.no1_4:hover {
+    transform: translateX(-15px);
+}
+
+.no1_5 {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+.no1_5:hover {
+    transform: translateX(-15px);
+}
+
+div[class^=no2] {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+div[class^=no3] {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+div[class^=no4] {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+div[class^=no5] {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1071a8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform, 1s;
+}
+
+img[class^=xtp] {
+    width: 50%;
+    height: 100%;
+    transition: width .5s;
+}
+
+img[class^=xtp]:hover {
+    width: 100%;
+}
+
+/* 雕像处字体小一点 */
+.no4_5 {
+    font-size: 0.6rem !important;
+}
+
+.no5_1 {
+    font-size: 0.6rem !important;
+}
+
+.no5_2 {
+    font-size: 0.6rem !important;
+}
+
+.no5_3 {
+    font-size: 0.6rem !important;
+}
+
+.no5_4 {
+    font-size: 0.6rem !important;
+}
+
+
+/* 导航栏部分结束 */
+.tupian {
+    position: relative;
+    height: auto;
+}
+
+.tupian .ditu {
+    width: 100%;
+    height: 100%;
+}
+
+/* 导航标模块start */
+span[class^=db] {
+    display: block;
+    width: 14px;
+    height: 17px;
+}
+
+.tupian .db1:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db2:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db3:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db4:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db5:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db6:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db7:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db8:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db9:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db10:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db11:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db12:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db13:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db14:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db15:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db16:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db17:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db18:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db19:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db20:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db21:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db22:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db23:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db24:hover {
+    transform: translateY(-30%);
+}
+
+.tupian .db25:hover {
+    transform: translateY(-30%);
+}
+
+/* .tupian span[class^=db]:hover {
+    transform: translateY(-15%) !important;
+}  */
+
+.tupian span:nth-of-type(1) {
+    position: absolute;
+    top: 63%;
+    left: 11.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(2) {
+    position: absolute;
+    top: 59.5%;
+    left: 18.3%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(3) {
+    position: absolute;
+    top: 46%;
+    left: 26%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(4) {
+    position: absolute;
+    top: 59.5%;
+    left: 26%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(5) {
+    position: absolute;
+    top: 59%;
+    left: 35%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(6) {
+    position: absolute;
+    top: 44.3%;
+    left: 35%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(7) {
+    position: absolute;
+    top: 38%;
+    left: 83%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(8) {
+    position: absolute;
+    top: 44%;
+    left: 45%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(9) {
+    position: absolute;
+    top: 59%;
+    left: 44%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(10) {
+    position: absolute;
+    top: 54%;
+    left: 63.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(11) {
+    position: absolute;
+    top: 41%;
+    left: 57%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(12) {
+    position: absolute;
+    top: 79.5%;
+    left: 52%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(13) {
+    position: absolute;
+    top: 76%;
+    left: 57%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(14) {
+    position: absolute;
+    top: 39.5%;
+    left: 72.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(15) {
+    position: absolute;
+    top: 14.5%;
+    left: 63%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(16) {
+    position: absolute;
+    top: 27.7%;
+    left: 51.3%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(17) {
+    position: absolute;
+    top: 35%;
+    left: 31%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(18) {
+    position: absolute;
+    top: 58.5%;
+    left: 3.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(19) {
+    position: absolute;
+    top: 57.5%;
+    left: 21.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(20) {
+    position: absolute;
+    top: 54.5%;
+    left: 31.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(21) {
+    position: absolute;
+    top: 54.5%;
+    left: 40.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(22) {
+    position: absolute;
+    top: 57.5%;
+    left: 38.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(23) {
+    position: absolute;
+    top: 54.5%;
+    left: 28.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(24) {
+    position: absolute;
+    top: 54.5%;
+    left: 45.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+.tupian span:nth-of-type(25) {
+    position: absolute;
+    top: 10.5%;
+    left: 43.5%;
+    cursor: pointer;
+    color: rgb(212, 106, 64);
+    font-size: 1.8rem;
+}
+
+/* 导航标模块end */
+/* 弹出图 */
+/* 弹出图类名统一为db00... */
+div[class^=db00] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 60%;
+    padding: 0;
+    display: none;
+    z-index: 1002;
+    transform: translate(-50%, -60%);
+}
+
+div[class^=db00] img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 550px;
+}
+
+/* 弹出图end */
+/* 弹出图的按钮 */
+div[class^=containerbtn] {
+    float: right;
+    transform: translateX(100%);
+}
+
+/* 弹出图按钮end */
+div[class^=tdk] {
+    height: 5%;
+}
+
+
+/* 雕像文字提示 */
+.lhx1 {
+    position: relative;
+}
+
+
+
+.wz {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0,-50%);
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.5rem;
+    background-image: url("../img/background3.jpg");
+    display: none;
+}
+.wzc {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0,-50%);
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.5rem;
+    background-image: url("../img/background3.jpg");
+    display: block;
+}
+.wzc a {
+    color: #000;
+}
+.dbshangchuancenter{
+    position: absolute;
+    left: 80%;
+    top: 80%;
+}
+.tishiwenzi {
+    font-size: 1.2rem !important;
+}
+.main {
+    background-image: url("../img/background3.jpg");
+}

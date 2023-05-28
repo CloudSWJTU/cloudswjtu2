@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% block title %}交大历史{% endblock %}
+{% block header %}
+    <link rel="stylesheet" href="/static/css/sec.css">
+    <link rel="stylesheet" href="/static/css/griddisplay.css">
+    <link rel="stylesheet" href="/static/css/displayphoto.css">
+    <link rel="stylesheet" href="/static/css/shangchuanhis.css">
+    <link rel="stylesheet" href="/static/css/navstyle.css">
+    <link rel="stylesheet" href="/static/css/copyright_default.css">
+    <link rel="stylesheet" href="/static/css/background.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/displayphoto.js"></script>
+    <script src="/static/js/shangchuan.js"></script>
+    <style>
+        body {
+            margin: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .masonry {
+            column-count: 5;
+            column-gap: 0;
+        }
+
+        .item {
+            /* padding: 2px; */
+            position: relative;
+            /* 计数器递增 第一参数为计数器名称（必写） 第二参数为初始值 默认为1 */
+            counter-increment: item-counter;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all .3s;
+            /* 为了控制文本块分解成单独的列，以免项目列表的内容跨列，破坏整体的布局。 */
+            break-inside: avoid;
+            box-sizing: border-box;
+        }
+
+        .item img {
+
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            z-index: 9;
+
+        }
+
+        .item::after {
+            position: absolute;
+            display: block;
+            top: 2px;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+
+        }
+
+        img:hover {
+            /* margin-top: -3px; */
+
+            animation: bounceIn 0.3s ease-in 2 alternate;
+        }
+
+        .item:hover .display {
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+            /* background-color: red; */
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px; */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, .3);
+            transition: all .3;
+            /* animation: bounceIn 0.3s  ease-in 2 alternate; */
+
+            /* 计数器 */
+            content: counter(item-counter);
+        }
+
+        .item:nth-child(5n+1) {
+            order: 1;
+        }
+
+        .item:nth-child(5n+2) {
+            order: 2;
+        }
+
+        .item:nth-child(5n+3) {
+            order: 3;
+        }
+
+        .item:nth-child(5n+4) {
+            order: 4;
+        }
+
+        .item:nth-child(5n+5) {
+            order: 5;
+        }
+
+
+        @keyframes bounceIn {
+            100% {
+                /* 向上移动3px */
+                /* transform: translateY(-3px) */
+                /* 放大1.02倍 */
+                transform: scale(1.02);
+                /* margin-top: -3px; */
+            }
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+
+
+            <section class="sec">
+            <div class="titlebk">
+                <div class="title">
+                    精勤求学&emsp;敦笃励志 <br>
+                    果毅力行&emsp;忠恕任事
+                </div>
+            </div>
+        </section>
+
+
+
+
+    <div class="masonry" id="masonry" style="margin-top: 150px">
+        <!-- <div class="item">
+            <img src="https://picsum.photos/360/460?random=1" >
+        </div> -->
+
+
+    </div>
+    <script>
+
+        //生成 100到400之间的随机数
+        //生成50次 随机的照片
+                    var masonry = document.querySelector('#masonry')
+
+        {% for history in historyList %}
+            var item = document.createElement('div')
+            item.className = 'item'
+            var div2 = document.createElement('div') //添加遮罩层
+            div2.className = 'display'
+            item.appendChild(div2)
+            var img = document.createElement('img')
+            img.src = '{{ history.img }}'
+            var img2 = document.createElement("p")
+            img2.style.fontSize = "20px";
+            img2.style.textAlign="center";
+            img2.style.marginTop="10px";
+
+            img2.innerText = "{{ history.content }}"
+
+
+
+
+            item.appendChild(img)
+            item.appendChild(img2)
+
+
+
+            {#item.appendChild(name)#}
+            masonry.appendChild(item)
+        {% endfor %}
+
+    </script>
+
+
+    <div style="margin-top: 60px">
+        <div id="shangchuan">
+            <div class="container">
+                <!-- <img src="./1.gif" alt="" class="imgture"><img src="./1.gif" alt="" class="imgture"><img src="./1.gif" alt="" class="imgture"> -->
+                <div class="upload-dragger" id="upload-btn"
+                     style="margin: 0 auto;margin-top: 100px;width: 200px;height: 200px">
+                    <!-- 阿里巴巴矢量图标库复制 -->
+                    <svg class="upload-icon" viewBox="0 0 1024 1024" width="100" height="100">
+                        <path d="M815.104 363.008a307.2 307.2 0 0 0-606.72 0A256 256 0 0 0 256 870.4h204.8v-204.8H358.4l153.6-204.8 153.6 204.8h-102.4v204.8h204.8a256 256 0 0 0 47.104-507.392z"
+                              fill="#8a8a8a"></path>
+                    </svg>
+                </div>
+                <input type="file" id="upload-input" multiple accept="image/*" hidden>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const fileInput = document.getElementById('upload-input')
+        const uploadBtn = document.getElementById('upload-btn');
+
+        uploadBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', () => {
+            var name = prompt("请输入文件名称：", "");
+            if (name == "") {
+                alert("文件名不能为空");
+                return;
+            }
+
+
+            const file = fileInput.files[0];
+            // 在此处添加上传文件的代码
+
+            const formData = new FormData();
+            formData.append('image', file);
+            formData.append('name', name);
+
+            fetch('/history/upload', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    window.location.reload()
+                    // 在此处添加上传成功后的处理逻辑
+                })
+                .catch(error => {
+                    // 在此处添加上传失败后的处理逻辑
+                });
+        });
+
+    </script>
+
+
+    <div class=" copyright ">
+        Copyright © 2022 Cloudswjtu.All rights reserved.
+    </div>
+{% endblock %}

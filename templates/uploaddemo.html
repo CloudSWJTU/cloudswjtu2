@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Image Gallery</title>
+
+</head>
+<body>
+    <div>
+    <style>
+        /* 定义瀑布流布局 */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image {
+            width: 20%;
+            height: auto;
+            margin: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <h1>Image Gallery</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <input type="submit" value="Upload">
+        <input type="text" value="picturename">
+        <input type="text" value="图片的名字">
+    </form>
+    <br><br>
+    <div class="image-container">
+        {% for url in image_urls %}
+            <img src="{{ url }}" class="image" alt="image">
+        {% endfor %}
+    </div>
+    </div>
+</body>
+</html>
+
+
+

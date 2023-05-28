@@ -1,0 +1,437 @@
+/* 历史部分grid格子 */
+.parent {
+    
+    height: 2200px;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    }
+    
+    #div1 { grid-area: 1 / 1 / 7/ 2; }
+    #div2 { grid-area: 1/ 2 / 1/ 4; }
+    #div6 { grid-area: 2 / 2 / 3 / 3; }
+    #div4 { grid-area: 1 / 4 / 3/ 5; }
+    #div5 { grid-area: 1 / 5 / 2/ 6; }
+    #div3 { grid-area: 2 / 5 / 3/ 6; }
+    #div7 { grid-area: 2 / 3 / 3/ 4; }
+    #div8 { grid-area: 3 / 2 / 5/ 5; }
+    #div9 { grid-area: 3 / 5/ 5/ 6; }
+    #div10 { grid-area: 5/ 2/ 6/ 3; }
+    #div11{ grid-area: 6 / 2 / 7/ 6; }
+    #div12{ grid-area: 7/ 5 / 12/6 ; }
+    #div13 { grid-area: 5/ 3/ 6/ 5; }
+    #div21{ grid-area: 10/ 1/12/3 };
+
+#div21:hover{
+  font-size: 16px;
+  content:"";
+  background-image:none;
+}
+#div21{
+  padding-left: 3%;
+  padding-right: 3%;
+  
+  content:"";
+
+}
+   
+    .parent div{
+        
+        justify-items: stretch;
+        align-items: center;
+        background: rgba(20, 111, 230, 0.2);
+        padding: 2%;
+        padding-top: 2%;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(196, 199, 202, 0.8);
+        text-align: left;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        font-family: "微软雅黑";
+        font-weight: bold;
+        font-size: 14px;
+        text-indent: 2em;
+        
+    }
+    .parent div:hover{
+        background-repeat: no-repeat;
+        padding-top: 2%;
+        text-indent: 2em;
+        text-align: left;
+        font-size: 14px;
+        font-family: "微软雅黑";
+        font-weight: bold;
+        
+        overflow: hidden;
+    }
+
+    #div2{ padding-left: 10px;
+            padding-right: 10px;
+            background-image: url(../img/jxygjzs.png);
+           background-position: center;
+          background-repeat: no-repeat;
+          ;
+        }
+    #div2:hover:after{
+    font-size: 16px;
+    content:"中国自1840年进入半殖民地半封建社会以来，国立衰弱，许多有识之士将建设铁路作为救国之道，但近代中国技术落后，少许的铁路也大多是由外国人主持修建。1893年9月20日，北洋官铁路局总工程师的金达上李鸿章，从中国铁路发展的需要出发，建议开设学堂，培养中国自己的铁路工程师。1896年5月4日，从北洋官铁路局调任津卢铁路总工程师的金达再次上书津卢铁路督办胡燏棻，再次陈述创建铁路学堂的建议。于是，清政府正式批准开办铁路学堂，山海关北洋铁路官学堂应运而生。";
+  }
+  #div2:hover{background-image: none;}
+
+
+  #div3:hover:after{
+    font-size: 14px;
+    content:"1928年，国民政府铁道部部长孙科兼任交通大学校长，他提出要“从精神上提起交大的精神”。1930年5月2日，在交大本部校训专案审查委员会第二次会议上，通过了“精勤求学，敦笃励志，果毅力行，忠恕任事”的16字校训。这成为交通大学共同的校训";
+ 
+  }
+  #div3:hover{
+    
+    background-image:none;
+  }
+  #div3{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image:url(../img/校训.jpg);
+    background-size: auto;
+  }
+
+
+#div4{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center,10px;
+    background-image: url(../img/皇帝签名.jpg);
+    padding-top: 10vh;
+    }
+#div4:after{
+content:"建校之苦";
+font-size:40px; 
+}
+#div4:hover{
+    padding-top: 10px;
+    background-image:none;
+}
+#div4:hover:after{
+font-size: 16px;
+content:"由于铁路是新兴事物，加上清政府腐败，学校建设虽得到皇帝批准，但不受重视。铁路学堂原临近开学时，房屋未能腾空修缮，为争取时间，与北洋西学堂商定，暂借该校校舍上课，1897年11月22日，学校迁至山海关。山海关建校创业很艰难，生活艰辛，但依旧坚持了严谨的学风。招考学生注重英文、算学成绩，毕业时考试成绩与津贴待遇和毕业的任用挂钩;教师主要依靠外籍教师，是从国外专家、工程技术人员或学有专长，留学归国的中国人中高薪选聘。";
+}
+
+#div5:hover:after{
+    font-size: 14px;
+    content:"1916年3月15日至4月14日，教育部举办全国专门以上学校成绩展览会，我校选送1915届毕业生王节尧和1916届毕业生茅以升作业参展，获评全国第一，教育总长特嘉奖“竢实扬华”匾额一方。这四个字对于今日的交大任然意义重大，成为西南交通大学精神的重要组成部分";
+  }
+  #div5:hover{
+    
+    background-image:none;
+  }
+  #div5{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image:url(../img/竢实扬华.jpg);
+    background-size: 90%;
+  }
+
+
+#div6:hover:after{
+    font-size: 16px;
+    content:"1900年，八国联军侵华，学堂校舍为沙俄军队侵占。铁路学堂在山海关办学的历史就此中断。虽然学校在1905年恢复，但对于常处于发展中的学校，任然是一次巨大的打击。";
+  }
+  #div6:hover{
+    
+    background-image:none;
+  }
+
+  #div6{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image:url(../img/mtdc.png);
+    background-size: 90%;
+  }
+
+
+  #div7:hover:after{
+    font-size: 14px;
+    content:"1920年12月，叶恭绰认为交通部直辖的4所学校（包括唐山工业专门学校、上海工业专门学校），分散各地，各自为政，缺乏明晰划一的组织系统，不能满足人才培养的需求，于是它提出将4校学制统一的意见。他接受当时任职交通部钟秉峰的建议，将合组后的大学，取名为交通大学。";
+  }
+  #div7:hover{
+    
+    background-image:none;
+  }
+  #div7{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image:url(../img/合并校徽.jpg);
+    background-size: 80%;
+  }
+
+  #div8{padding:10px;
+    text-align: left;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color:black;
+    font-size: 16px;
+    }
+    
+  #div8:hover{padding:10px;
+    text-align: left;
+    text-align: left;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color:black;
+    font-size: 16px;
+    text-indent: 2em;
+  }
+  .qianxiao{
+    height: 80%;
+    display:flex;
+    float: left;
+    margin: 10px;
+  }
+  .time{
+    font-size: 120%;
+  }
+
+  #div9:hover:after{
+    font-size: 16px;
+    content:"在师生逃亡至上海后，校本部个别领导曾意图将我校并入沪校。提出唐校与沪校合并上课。遭到我校师生的一致反对。罗忠忱教授当面质问提出合并建议的人：“What you mean! Mean what you say!”，最终在双方校友的交流过后，沪校不仅保证不合并唐校，同时在当时拮据的局面下任然挤出场地和资源供我方教学。在之后唐校流离个路途中，也一直收到了沪校校友的协助。之后的复校和解放战争时唐校再次的逃亡的路途，亦离不开友校的鼎力相助。";
+  }
+  #div9:hover{
+    background-image:none;
+  }
+  #div9{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image:url(../img/hnzq.png);
+  }
+
+  #div10:hover:after{
+    font-size: 15px;
+    content:"在“918”事变之后，我国北方便笼罩在恐怖之中。为了使师生能认识在国难当头时的重任，1934年，学校制定了院歌，“翳唐山，灵秀钟，我学院，声誉隆，灌输文化尚交通。习矿冶，土木工……”短短的几行歌，见证了唐校的百年沧桑。";
+  }
+  #div10:hover{
+    background-image:none;
+  }
+  #div10{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image:url(../img/xiaoge.png);
+  }
+
+
+  #div1{
+    background-image: url(../img/时间轴1.jpg);
+    background-size: contain;
+    justify-items: stretch;
+    background-color:rgba(196, 199, 202, 0);
+      align-items: center;
+      overflow: hidden;
+      box-shadow: none;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+  }
+  #div11{
+    background-image: url(../img/时间轴2.jpg);
+    background-size: contain;
+    justify-items: stretch;
+    background-color:rgba(196, 199, 202, 0);
+      align-items: center;
+      overflow: hidden;
+      box-shadow: none;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+  }
+  #div12{
+    background-image: url(../img/时间轴3.jpg);
+    background-size: contain;
+    justify-items: stretch;
+    background-color:rgba(196, 199, 202, 0);
+      align-items: center;
+      overflow: hidden;
+      box-shadow: none;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+  }
+
+  #div13:hover:after{
+    font-size: 12px;
+    content:"1939年学校迁至平越后，条件随十分艰苦，但师生门依旧苦中作乐，十几个浙江同学集体租用一间陋室，布置得井井有条，称为“越居”。师生们寄情于山水之间，有前辈道：“平越的山山水水，一草一木都和我们结下了不解之缘，对山水的怀念，实际上是对人的怀念。”。同时学校也沿袭了严谨的治学风格,以严师与名师扬名茅以升和“五老”，德高望重，是学校的中流砥柱，罗河、朱泰信、许元启、李汶被称为学校的“四少”，教师队伍后继有人。同时，师生也时刻牢记国仇家恨，我校歌咏队是群众性最广的组织。每天晚饭后，队员自发地聚集在街头巷尾，唱起抗日救亡的歌曲,围观的群众也随着齐唱，成为了平越靓丽的风景线。";
+  }
+  #div13:hover{
+    padding-left:5px ;
+    padding-top: 5px;
+    background-image:none;
+  }
+  #div13{
+    padding-top: 0;
+    padding-left: 65%;
+    padding-right: 5px;
+    background-image:url(../img/平越.jpg);
+    background-size:90%;
+    background-position:0,0;
+    background-size: contain;
+  }
+  #div13:hover img{
+    float: left;
+    
+  }
+
+
+  #div14:hover:after{
+    
+    font-size: 12px;
+    content:"抗日战争时期，我校教学成果丰硕。毕业生中被选为院士的有张维、严恺、刘恢先、张沛霖、佘畯南、林秉南、肖纪美、徐采栋、邱竹贤、陈能宽、庄智育、谭靖夷、龙驭球等，成工程勘察设计大师的有：佘畯南、胡惠泉；两弹一星功勋奖章获得者有：姚桐斌、陈能宽；还为中国革命事业培养了武可久、袁仲凡等革命干部";
+  }
+  #div14:hover{
+    padding-top:5px;
+    background-image:none;
+  }
+  #div14{
+    padding-left: 5px;
+    padding-right: 5px;
+    background-image:url(../img/多难.png);
+  }
+  #div14 { grid-area: 5/ 5/ 6/ 6; }
+  #div15{ grid-area: 7/ 1/ 8/ 3; }
+  #div16{ grid-area: 7/ 3/ 9/4; }
+  #div17{ grid-area: 7/ 4/8/5; }
+  #div18{ grid-area: 8/1/10/3; }
+  #div19{ grid-area: 8/4/9/5; }
+  #div15:hover:after{
+    font-size: 12px;
+    content:"1946年3月8日，教育部下令同意我校迁回唐山。4月9日又下令，将我校校名更名为国立唐山工学院，独立建制，隶属教育部，原交通大学北平铁道管理学院更名国立北平铁道管理学院，迁回北平。至此，唐、平、沪三校第二次组成的统一的交通大学再次解冻，成为三所独立的大学，但是我校的力学宗旨仍然是为全国培养铁路建设人才。1946年4月底，教育部拨给搬迁费13653万元，修缮费4亿元。复员唐山事宜提上议事日程。6月20日，复员大队满怀着胜利的喜悦，开始踏上艰难漫长的回唐路程。。23日下午5时，师生们回到了阔别9年，魂牵梦萦的唐山校园。一路上整整走了65天。";
+  }
+  #div15:hover{
+    padding-left:5px ;
+    padding-top: 5px;
+    background-image:none;
+  }
+  #div15{
+    padding-top: 5%;
+    padding-left: 60%;
+    padding-right: 5px;
+    background-image:url(../img/老校门.jpg);
+    background-size:90%;
+    background-position:0,0;
+    background-size: contain;
+  }
+  #div15:hover img{
+    float: left;
+  }
+
+  #div16:hover:after{
+    font-size: 15px;
+    content:"1947年5月15日是我校建校51周年，唐山复校42周年纪念日，唐山工学院隆重举行了抗战胜利复员唐山后的第一次校庆盛会。北平校友会敬献母校的汉白玉纪念碑，碑文如下：路政肇兴，溯在清季。兼筹采矿，设校伊始。唐山西郊，爰奠校址。缔造宏规，袁胡创议。叶公绾领，久膺艰巨。罗熊赵章，刘孙茅李。先后长校，群贤继起。恪共乐育，实顾伍复校，备极劳瘁。卌二年中，斐然足纪。中经移徙，载历颠沛。学成致用，千百济济。猗欤盛哉！母校万祀。民国三十六年五月十五日  唐大校友会北平分会制赠";
+  }
+  #div16:hover{
+    
+    background-image:none;
+  }
+  #div16{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image:url(../img/汉白玉纪念碑.png);
+    background-size: 90%;
+  }
+
+  #div18:hover{
+    padding-top:5px;
+    background-image:none;
+  }
+  #div18{
+    text-indent:2em;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: left;
+  }
+#div18 img{
+  float:left;
+
+  height: 30%;
+  display: inline;
+}
+
+#div19:hover:after{
+  font-size: 12px;
+  content:"1949年7月8日，1铁道部部长决定将国立唐山工学院、国立北平铁道管理学院（现北京交通大学）、华北交通学院合并组成中国交通大学，毛泽东主席任命茅以升为校长，铁道运输专家、金士宣为副校长，学校校部设在北京东交民巷34号，下辖唐山工学院、北平铁道管理学院两校。1950年，中央人民政府政务院令中国交通大学更名为“北方交通大学”。1951年，时任中央人民政府主席的毛泽东同志为此时之北方交通大学（含唐、平两院）亲笔题写校名。";
+}
+#div19:hover{
+  padding-top: 5px;
+  background-image:none;
+  height: 110%;
+}
+#div19{
+  padding-left: 5px;
+  padding-right: 5px;
+  background-image:url(../img/毛主席北方交大.jpg);
+  background-size: 90%;
+}
+
+#MVvideo{ grid-area:10/3/12/5; }
+#MVvideo{
+  padding: 5px;
+  padding-top: 20%;
+  background-image: url(../img/sishuinianhua.png);
+  background-position-y: 6%;
+  background-size: 80%;
+  text-indent: 0em;
+}
+#MVvideo:hover{
+  text-indent: 0em;
+  padding: 5px;
+  padding-top: 20%;
+}
+#div17:hover:after{
+  font-size: 16px;
+  content:"解放战争中，国民党以“爱护师生”为名向学校下达了南迁的命令。学校中因此问题发生了争执。1948年11月南迁开始，后虽下令停止的决定，但此次迁校依然造成了巨大的损失。";
+}
+#div17:hover{
+  
+  background-image:none;
+}
+
+#div17{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-image:url(../img/ybwpybyq.png);
+  background-size: 90%;
+}
+#div20{ grid-area: 9/ 3/10/5 };
+#div20:hover{
+  text-indent: 0em;
+  padding-top: 3%;
+
+  float: left;
+  font-size: 13px;
+}
+.kmyc{
+  height:80%;
+  float: left;
+}
+#div20:hover:after{
+  text-indent: 0em;
+
+}
+.bnmx{
+  float: left;
+}
+#jdcq{
+  float: left;
+  float: right;
+}

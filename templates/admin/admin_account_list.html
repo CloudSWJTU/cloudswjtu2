@@ -1,0 +1,114 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.2/echarts.common.js"></script>
+    <h1>用户兴趣图</h1>
+    <div id="second" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+    var myChart2 = echarts.init(document.getElementById('second'));
+    var option2;
+           option2 = {
+          title: {
+            text: 'favour of the Website',
+            subtext: '喜爱种类',
+            left: 'center'
+          },
+          tooltip: {
+            trigger: 'item'
+          },
+          legend: {
+            orient: 'vertical',
+            left: 'left'
+          },
+          series: [
+            {
+              name: 'Access From',
+              type: 'pie',
+              radius: '50%',
+              data: [
+                { value: 14, name: '交大历史' },
+                { value: 10, name: '交大地标' },
+                { value: 16, name: '交大社团' },
+                { value: 9, name: '交大服务区' },
+              ],
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+              }
+            }
+          ]
+        };
+        myChart2.setOption(option2);
+     </script>
+
+
+
+    <div>
+    <form class="bs-example bs-example-form" role="form">
+        <div>
+            <div style="float: left;width: 100px">
+         <a type="button" class="layui-btn" href="/admin/account/option">添加</a>
+
+            </div><!-- /.col-lg-6 -->
+            <div style="float: left;width: 400px">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="keyword" value="{% if keyword %}{{ keyword }}{% endif %}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">搜索</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+</div>
+    <div style="clear: both"></div>
+
+    <table >
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>头像</th>
+            <th>账号</th>
+            <th>邮箱</th>
+            <th>创建时间</th>
+            <th>删除</th>
+            <th>修改</th>
+        </tr>
+        </thead>
+<tbody>
+{% for re in result %}
+
+    <tr >
+        <td>{{ re.id }}</td>
+        <td>
+            <img src="{{ re.img }}" alt="" style="width: 100px;height: 80px">
+{#            {{ re.image }}</td>#}
+        <td>{{ re.name }}</td>
+        <td>{{ re.email }}</td>
+        <td>{{ re.create_time }}</td>
+        <td><a href="/admin/account/del?id={{ re.id }}"><button>删除</button></a></td>
+         <td><a href="/admin/account/option?id={{ re.id }}"><button>修改</button></a></td>
+    </tr>
+{%  endfor %}
+</tbody>
+</table>
+
+    <div id="demo-laypage-normal-1"></div>
+<ul class="pagination">
+{% for foo in page_range %}
+    {% if foo == page %}
+        	<li class="active"><a href="?page={{ foo }}{% if keyword %}&keyword={{ keyword }}{% endif %}">{{ foo }}</a></li>
+
+        {% else %}
+	<li><a href="?page={{ foo }}{% if keyword %}&keyword={{ keyword }}{% endif %}">{{ foo }}</a></li>
+
+    {% endif %}
+{% endfor %}
+
+
+</ul>
+
+
+{% endblock %}

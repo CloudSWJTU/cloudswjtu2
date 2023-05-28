@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cate.name }}</title>
+       <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+<body>
+<link href="/static/css/club_style1.css" rel="stylesheet" media="screen" type="text/css" />
+<div class="con">
+  <div class="head">
+
+    <div class="nav">
+      <ul>
+        <li><a href="/league/index">首页 </a></li>
+          {% for cate in cates %}
+                  <li><a href="/league/detail/{{ cate.id }}">{{ cate.name }} </a></li>
+
+          {% endfor %}
+                        <li><a href="/league/active/list">社团</a></li>
+
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <!------------------ end nav--------------------------->
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="main">
+    <div class="left">
+      <div class=" l1"><a href="#"><img src="/static/img/swjtu_logo_1.1_sm.png"  alt="图片"/></a></div>
+      <div class="left_nav">
+        <ul>
+            {% for cate in cate_list %}
+                      <li><a href="/league/detail/{{ cate.id }}">{{ cate.name }} </a><span><a href="/league/detail/{{ cate.id }}">{{ cate.num }} </a></span></li>
+
+            {% endfor %}
+        </ul>
+      </div>
+      <!------------------ end left_nav--------------------------->
+
+    </div>
+    <!------------------ end left--------------------------->
+    <div class="right">
+      <div class="right_des">
+        <h1>{{ cate.name }}社团</h1>
+          {% for league in leagues %}
+              <h3 class="pass"><strong>{{ league.name }}</strong><span style="float: right;padding-right: 30px">
+
+                  <a href="/league/collection?id={{ league.id }}&cid={{ cate.id }}" style="font-size: 16px;color: white">{% if league.iscollection %}
+                      取消订阅
+                      {% else %}
+                  订阅
+                  {% endif %} </a></span></h3>
+        <p>{{ league.summary }}</p>
+        <div class="m10"><a href="#"><img src="{{league.image}}"  alt="图片"/></a></div>
+
+          {% endfor %}
+
+
+      </div>
+      <!------------------ end article_nav--------------------------->
+    </div>
+    <!------------------ end right--------------------------->
+    <div class="clear"></div>
+  </div>
+  <!------------------ end main--------------------------->
+  <div class="clear"></div>
+  <div class="foot">
+    <p>Copyright 2022</p>
+    <p>All Rights Reserved</p>
+  </div>
+</div>
+<script type="text/javascript" src="../static/js/club.js"> </script>
+</body>
+</html>

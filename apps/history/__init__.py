@@ -1,0 +1,1 @@
+from .views import bp as history_bp

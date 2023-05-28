@@ -1,0 +1,822 @@
+
+/* 主页的样式表 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#indexcontent{
+    overflow: visible;
+}
+.carouselinnerspace{
+    background-image: url(../img/sishiyanghua.png);
+}
+.carousel-item img{
+    height: 700px;
+}
+.carousel-item a{
+    display: flex;
+    justify-content: center;
+}
+.carousel-caption h3{
+    color: rgba(54, 131, 218, 0.9);
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.carouselinnerspace{
+    display: flex;
+    overflow: hidden;
+    justify-items: center;
+}
+.gridbox{
+    display: grid;
+}
+.flexbox{
+    display:flex;
+}
+/* 模块过渡栏 */
+.contenttraninner{
+    z-index: 2;
+    width: 100%;
+    height: 4rem;
+}
+.contenttran{
+    width: 105%;
+    position: relative;
+    transform: translateY(-4rem);
+    transform: translateX(-30px);
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    overflow: visible;
+}
+.contenttran div:nth-child(1)
+{
+    color: rgb(61, 144, 157);
+    font-style: italic;
+    font-size: 3rem;
+}
+.contenttran div:nth-child(2)
+{
+    color:black;
+    font-size: 30px;
+
+}
+.contenttran a{
+    text-decoration: none;
+    list-style: none;
+    border-radius: 25px;
+    color: rgb(47, 173, 227);
+    background-image: url(../img/南门_br_zsy.jpg);
+    background-size: cover;
+    background-position: fixed;
+}
+.contenttran a:hover {
+     transition: 0.2s;
+      opacity: 0.9;
+     box-shadow: 3px 3px 3px black;
+     color: rgb(0, 0, 0);
+     letter-spacing: 3px;
+}
+hr{
+    z-index: 0;
+}
+/* 基本模块 */
+.contentpart{
+    overflow: visible;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    background-image: url(../img/library3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+    justify-content: space-between;
+    
+}
+/* 内容区框架 */
+.indexcontentpartleft{
+
+}
+.indexcontentpartmiddle{
+    border: solid;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+/* 过渡 */
+.transpan{
+    position: relative;
+    width:100%;
+    height: 1px;
+    border-style: solid;
+    border-bottom: rgb(168, 107, 107);
+}
+/* 介绍 */
+.aboutus{
+    overflow: hidden;
+    width:80%;
+    margin-left: 10%;
+    height:600px;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 3fr 1fr;
+    background-image: url(../img/liujiaopaizi.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   gap: 20px;
+}
+.intro{
+    margin: 20px;
+}
+.intro p{
+   font-size:x-large;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px  1px black;
+}
+.intro .introtitle{
+    color: rgb(0, 0, 0);
+    text-shadow:black;
+    text-align: center;
+    font-size: 70px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(181, 217, 248, 0.616);
+}
+.diary{
+    overflow: scroll;
+    background-image:url(../img/jc-3.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 90%;
+    padding: 0%;
+}
+.diary::-webkit-scrollbar {display:none;
+}
+.diary h1{
+    text-align: center;
+    font-style: italic;
+    background-color: rgb(176, 211, 211);
+}
+.diary p{
+    font-size:x-large;
+}
+.time{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: dashed;
+}
+
+
+/* 历史 */
+.history{
+    height: 600px;
+    width:90%;
+    margin-left:5%;
+    margin-right: 5%;
+    background-color: rgb(106, 150, 243);
+    box-shadow: 10px;
+    grid-template-columns: 99%;
+    grid-template-rows: 99%;
+    justify-content: center;
+    align-items: center;
+}
+.historyinb1{
+    height: 90%;
+    position: relative;
+    top: 10px;
+    background-image: url(../img/d1-3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    gap:20px;
+    grid-template-rows:auto;
+    grid-template-columns:repeat(4,25%);
+    grid-template-areas: 
+          ". b . d "
+          ". . . . "
+          "a .  c. ";
+}
+.historyinb1 div:nth-child(even){
+    position: relative;
+    height: 200px;
+    transform:translateY(40px);
+    background-color: #2196F3;
+}
+.historyinb1 div:nth-child(odd){
+    position: relative;
+    height: 200px;
+    transform: translateY(-20px);
+    background-color: #2196F3;
+}
+.item-a {
+    grid-area: a;
+    background-image: url(../img/交大迁校.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    border: solid rgb(207, 203, 203) 3px;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+  }
+  .historyinb1 .item-a .item-aintro{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -200px;
+    height: 170px;
+    width: 100%;
+    background-color: rgba(214, 215, 216, 0.5);
+  }
+  .item-b {
+    background-image: url(../img/合并校徽.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    border: solid rgb(207, 203, 203) 3px;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    grid-area: b;
+  }
+  .historyinb1 .item-b .item-bintro{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 300px;
+    height: 170px;
+    width: 100%;
+    background-color: rgba(214, 215, 216, 0.5);
+  }
+  .item-c {
+    background-image: url(../img/emxq.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    border: solid rgb(207, 203, 203) 3px;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    grid-area: c;
+  }
+  .historyinb1 .item-c .item-cintro{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -200px;
+    height: 170px;
+    width: 100%;
+    background-color: rgba(214, 215, 216, 0.5);
+  }
+  .item-d {
+    background-image: url(../img/xh-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    border: solid rgb(207, 203, 203) 3px;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    grid-area: d;
+  }
+  .historyinb1 .item-d .item-dintro{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 300px;
+    height: 170px;
+    width: 100%;
+    background-color: rgba(214, 215, 216, 0.5);
+  }
+  .historyinb1 .item-a:hover{
+         transition-timing-function: ease-in-out;
+         border: solid rgb(0, 0, 0) 3px;
+        position: relative;
+        translate: -10px -20px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+  }
+  .historyinb1 .item-a:hover .item-aintro{
+        display: grid;
+  }
+  .historyinb1 .item-b:hover{
+    transition-timing-function: ease-in-out;
+    border: solid rgb(0, 0, 0) 3px;
+   position: relative;
+   translate: -10px -20px;
+   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+}
+.historyinb1 .item-b:hover .item-bintro{
+    display: grid;
+}
+.historyinb1 .item-c:hover{
+    transition-timing-function: ease-in-out;
+    border: solid rgb(0, 0, 0) 3px;
+   position: relative;
+   translate: -10px -20px;
+   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+}
+.historyinb1 .item-c:hover .item-cintro{
+    display: grid;
+}
+.historyinb1 .item-d:hover{
+    transition-timing-function: ease-in-out;
+    border: solid rgb(0, 0, 0) 3px;
+   position: relative;
+   translate: -10px -20px;
+   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+}
+.historyinb1 .item-d:hover .item-dintro{
+    display: grid;
+}
+  /* .historyinb1 .item-b:hover{
+    background-color: #989898;
+    transition: 0.2s;
+
+}
+.historyinb1 .item-c:hover{
+    background-color: #989898;
+    transition: 0.2s;
+
+}
+.historyinb1 .item-d:hover{
+    background-color: #989898;
+    transition: 0.2s;
+
+} */
+  .histroyinb2{
+    overflow: hidden;
+    grid-area: inb2;
+    background-color: rgb(0, 215, 208);
+    gap: 10px;
+    grid-template-rows:repeat(2,50%);
+    grid-template-columns: 100%;
+}
+/* 地图部分 */
+.map{
+    overflow: visible;
+    width: 100%;
+    height:400px;
+    box-shadow: 10px;
+    grid-template-rows: 100%;
+    z-index: 5;
+}
+.mapinb1{
+    position: absolute;
+    height: 400px;
+    border-color: black;
+    border: 10px;
+    background-color: rgba(0,0,0, 0.7);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.mapinb1 ul{
+    text-align: start;
+    letter-spacing:1px;
+    list-style: none;
+
+}
+.mapinb1 ul li{
+    font-size: 2rem;
+}
+.mapinb1 ul li a{
+    border-style: outset;
+    border: 3px;
+    border-color: aliceblue;
+    color:white ;
+    text-shadow: 1px 1px 1px black;
+}
+.mapinb2{
+    overflow: visible;
+    background-image: url(../img/map_3d.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.mapinb2 div{
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+}
+.mapinb2 div:nth-child(1)
+{
+    margin-left: 15vw;
+    position: relative;
+    transition: 0.5s;
+     top: 4vw;
+    position: relative;
+    height: 70%;
+    width: 20vw;
+    background-color: #ffffff;
+    
+}
+.mapinb2 div img{
+    width: 100%;
+}
+.mapinb2 div:nth-child(2)
+{   
+    position: relative;
+    transition: 0.5s;
+    top: 4vw;
+    position: relative;
+    height: 70%;
+    width: 20vw;
+    background-color: rgb(228, 141, 141);
+}
+.mapinb2 div:nth-child(3)
+{
+    position: relative;
+    transition: 0.5s;
+    top: 4vw;
+    position: relative;
+    height: 70%;
+    width: 20vw;
+    background-color: rgb(210, 171, 245);
+}
+.mapinb2 div:hover
+{
+   
+    width: 30vw;
+    background-color: rgba(64, 166, 249, 0.489);
+}
+
+/* 社团 */
+.association{
+    width:100%;
+    margin-right: 1%;
+    position: relative;
+    height: 500px;
+    background-color: rgb(99, 99, 99);
+    align-items: center;
+}   
+.association .innerass{
+    background-image: url(../img/background2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: visible;
+    width: 100%;
+    height: 400px;
+
+    column-gap: 20px;
+    background-color: #2196F3;
+    grid-template-columns: 20% 20% 20% 15% 15%;
+    grid-template-rows: repeat(5,20%);
+    grid-template-areas: 
+    '. . . assd asse'
+    ' assa assb assc assd asse'
+    ' assa assb assc assd asse'
+    ' assa assb assc assd asse'
+    '. . . assd asse';
+    text-align: center;
+}
+.association .innerass div .descrption h1{
+    font-size: 3vw;
+    color:white;
+}
+.association .innerass div .descrption p{
+    font-size: 1vw;
+
+}
+.association .innerass div:nth-child(1)
+{
+    position: relative;
+    overflow: hidden;
+    grid-area: assa;
+    border-radius: 25px;
+    background-color: #eaeaea;
+}
+.association .innerass div:nth-child(1) img{
+    position: relative;
+    height: 100%;
+
+}
+.association .innerass div:nth-child(1) img:hover{
+    transform: scale(1.1);
+    
+}
+.association .innerass div:nth-child(1) .descrption{
+    width: 100%;
+    display: block;
+    background-color: rgba(181, 217, 248, 0.4);
+    position: absolute;
+    top: 23vw;
+    transition: all 1s;
+}
+.association .innerass div:nth-child(1):hover
+{
+    border: solid burlywood 4px;
+    transition: all .5s;
+}
+.association .innerass div:nth-child(1):hover .descrption
+{
+    transform: translate(0px,-15vw);
+}
+.association .innerass div:nth-child(1):hover img
+{
+    transition: all .5s;
+}
+/* ---------------- */
+.association .innerass div:nth-child(2)
+{
+    position: relative;
+    overflow: hidden;
+    grid-area: assb;
+    border-radius: 25px;
+    background-color: #eaeaea;
+}
+.association .innerass div:nth-child(2) img{
+    position: relative;
+    height: 100%;
+
+}
+.association .innerass div:nth-child(2) img:hover{
+    transform: scale(1.1);
+    
+}
+.association .innerass div:nth-child(2) .descrption{
+    width: 100%;
+    display: block;
+    background-color:  rgba(181, 217, 248, 0.4);
+    position: absolute;
+    top: 23vw;
+    transition: all 1s;
+}
+.association .innerass div:nth-child(2):hover
+{
+    border: solid burlywood 4px;
+    transition: all .5s;
+}
+.association .innerass div:nth-child(2):hover .descrption
+{
+    transform: translate(0px,-15vw);
+}
+.association .innerass div:nth-child(2):hover img
+{
+    transition: all .5s;
+}
+/* ------ */
+.association .innerass div:nth-child(3)
+{
+    position: relative;
+    overflow: hidden;
+    grid-area: assc;
+    border-radius: 25px;
+    background-color: #eaeaea;
+}
+.association .innerass div:nth-child(3) img{
+    position: relative;
+    height: 100%;
+
+}
+.association .innerass div:nth-child(3) img:hover{
+    transform: scale(1.1);
+    
+}
+.association .innerass div:nth-child(3) .descrption{
+    width: 100%;
+    display: block;
+    background-color:  rgba(181, 217, 248, 0.4);
+    position: absolute;
+    top: 23vw;
+    transition: all 1s;
+}
+.association .innerass div:nth-child(3):hover
+{
+    border: solid burlywood 4px;
+    transition: all .5s;
+}
+.association .innerass div:nth-child(3):hover .descrption
+{
+    transform: translate(0px,-15vw);
+}
+.association .innerass div:nth-child(3):hover img
+{
+    transition: all .5s;
+}
+
+.association .innerass div:nth-child(4)
+{
+    grid-area: assd;
+    border-radius: 25px;
+}
+.association .innerass div:nth-child(5)
+{
+    overflow: hidden;
+    grid-area: asse;
+    border-radius: 10px;
+    background-color: rgb(199, 192, 192);
+}
+.association .innerass div:nth-child(5) .associationofficial a{
+    list-style: none;
+    color:#0f326a;
+    display:block;
+    margin: 0 30px;
+    font-size: 1vw;
+    text-decoration: none;
+}
+.association .innerass div:nth-child(5) .assadvertisement{
+    position: relative;
+    height: 80%;
+    border-radius: 15px;
+    background-color: #a1c4fd;
+}
+.association .innerass div:nth-child(5) .assadvertisement h2{
+    font-size: 2.3vw;
+}
+.association .innerass div:nth-child(5) .assadvertisementinner{
+    position: relative;
+    height: 80%;
+    background-image: url(../img/0-1.jpg);
+    background-size: cover;
+}
+/* 小组分工 */
+.fengong h2{
+    text-align: center;
+    color: #d1e2ff;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+}
+.fengonginner{
+    overflow: hidden;
+    padding: 0;
+    background-color: #b9bdc1;
+
+}
+.fengonginner .profile{
+    background-color: #a1c4fd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    row-gap: 50px;
+    column-gap: 50px;
+    grid-template-columns:10vw 10vw 10vw ;
+    grid-template-rows: 10vw 10vw;
+    transition: all 0.5s;
+}
+.fengonginner .profile div:hover {
+    transition: 0.5s;
+    position: relative;
+    transform: scale(1.2);
+    transform: translateY(-5px);
+    border:solid gold 3px;
+   
+}
+
+.fengonginner .profile img{
+    width: 10vw;
+    height: 10vw;
+}
+.fengonginner .profile div{
+    
+    border:  white 2px;
+    border-style: solid;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.fengonginner .profile div:hover .profile div{
+    border:black;
+}
+.fengongjieshao{
+    transition: all 0.5s;
+    position: relative;
+    top: 1vw;
+    left: 9vw;
+    column-gap: 6vw;
+    row-gap: 2vw;
+    grid-template-columns:10vw 10vw 10vw ;
+    grid-template-rows: 10vw 10vw;
+    padding-top: 10px;
+}
+.fengongjieshao div{
+    background-color: #a1c4fd;
+    width: 13vw;
+    height: 9vw;
+    border: #989898 1px;
+    border-right: white 1px;
+    border: solid;
+}
+.fengongjieshao div h3{
+    font-size: 2vw;
+    text-decoration:underline;
+}
+.fengongjieshao div p{
+    font-size: 1vw;
+}
+/* 页脚 */
+.footer{
+    background-image: url(../img/0-2.jpg);
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.footer li{
+    padding-top: 20px;
+    list-style: none;
+    display:block;
+    margin: 0 30px;
+    font-size: 30px;
+    border: 1px black;
+    text-align: center
+}
+.footer li a{
+    transition: all .3s;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.footer .footerinfo{
+    height: auto;
+    color: white;
+    font-weight: 300;
+}
+.footer .footerdown{
+    height: 200px;
+    justify-content:space-around;
+}
+.footer .footerdown div p{
+    color: white;
+    font-size: 20px;
+}
+.footer .footerdown .qrcode{
+    width: 100px;
+    height: 100px;    
+}
+.copyright{
+    background-color: black;
+    font-size: 20px;
+    height: 50px;
+    color: aliceblue;
+    min-width: 200px;
+    justify-content: center;
+}
+.indexcontentright{
+
+}
+/* 集合各种脚本的玩意 */
+ .minipart{
+    position: fixed;
+    border-radius: 25px;
+    padding-top: 30px;
+    background-color:rgba(0, 137, 249, 0.5);
+    height: auto;
+    width: 200px;
+    right: 5%;
+    top: 100px;
+    z-index: 5;
+    font-size: 10px;
+    transition: all 0.8s;
+}
+.minipartclose{
+    position: absolute;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    top: -15px;
+}
+.tackbackbutton{
+    display: none;
+    position: fixed;
+    left: 99%;
+    top: 50%;
+}
+.innerminipart_return{
+    position: relative;
+    overflow: visible;
+    background-color: aliceblue;
+    height:20px;
+    right: 60px;
+    box-shadow: 5px 5px 5px rgb(105, 212, 231);
+}
+.innerminipart_return a{
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    color: black;
+}
+.innerminipart_tran{
+    vertical-align: top;
+    font-size: 15px;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.4);
+}
+.innerminipart{
+    text-align: center;
+}
+.innerminipart audio{
+    position: relative;
+    left: -50px;
+}
+.innerminipart .liuyanbaninput{
+    height: 100px;
+}

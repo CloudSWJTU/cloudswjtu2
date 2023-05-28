@@ -1,0 +1,50 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+<form class="layui-form" action="" method="post" enctype="multipart/form-data">
+
+    <input type="text" value="{{ league.id }}" name="id" hidden>
+  <div class="layui-form-item">
+    <label class="layui-form-label">社团名称</label>
+    <div class="layui-input-block">
+      <input type="text" name="name" value="{{ league.name }}" required  lay-verify="required" placeholder="请输入社团名称" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">社团图片</label>
+    <div class="layui-input-block">
+      <input type="file" name="image" placeholder="请输入社团名称" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+      <div class="layui-form-item">
+    <label class="layui-form-label">社团简介</label>
+   <div class="layui-input-block">
+      <textarea name="summary" placeholder="请输入内容" class="layui-textarea">{{ league.summary }}</textarea>
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">社团类别</label>
+    <div class="layui-input-block">
+      <select name="cate" lay-verify="required">
+          {% for leaguecagte in leaguecagtes %}
+              {% if leaguecagte.id==league.id %}
+                                <option value="{{ leaguecagte.id }}" selected>{{ leaguecagte.name }}</option>
+                  {% else %}
+                                <option value="{{ leaguecagte.id }}">{{ leaguecagte.name }}</option>
+
+              {% endif %}
+
+          {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">添加社团</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,470 @@
+{% extends 'base.html' %}
+{% block title %}交大主页{%  endblock %}
+{% block header %}
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/common.css' ) }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/navstyle.css' ) }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static',filename='js/click.js' ) }}"></script>
+  <script src="{{ url_for('static',filename='js/fengongstylechange.js' ) }}"></script>
+  <script src="{{ url_for('static',filename='js/time.js' ) }}"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.2/echarts.common.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+{% endblock %}
+{% block content %}
+  <div>
+    <div id="demo" class="carousel slide carouselinnerspace" data-bs-ride="carousel">
+      <!-- 指标/点 -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+      </div>
+
+      <!-- 幻灯片/轮播 -->
+      <div class="carousel-inner ">
+        <div class="carousel-item active">
+          <a href="index.html"><img src="{{ url_for('static',filename='img/网站介绍.png' ) }}" alt="intro" class="d-block "></a>
+          <div class="carousel-caption">
+            <h3>欢迎来到云上交大</h3>
+            <p>芝士一个小组作业</p>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <a href="jdhistory.html"><img src="{{ url_for('static',filename='img/qiang-1.jpg' ) }}" alt="地标" class="d-block "></a>
+          <div class="carousel-caption">
+            <h3>交大历史</h3>
+            <p>1896-2022 辉煌与迁徙，赓续与伟大</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="jdhistory.html"><img src="{{ url_for('static',filename='img/山海关.jpg' ) }}" alt="图书馆" class="d-block "></a>
+          <div class="carousel-caption">
+            <h3>交大历史</h3>
+            <p>旧址</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="club_index1.html"><img src="{{ url_for('static',filename='img/网络安全协会.png' ) }}" alt="协会" class="d-block "></a>
+          <div class="carousel-caption">
+            <h3>协会</h3>
+            <p>网安协会</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="swjtudb.html"><img src="{{ url_for('static',filename='img/library_self.jpg' ) }}" alt="图书馆" class="d-block "></a>
+          <div class="carousel-caption">
+            <h3>地标</h3>
+            <p>图书馆电气院是卷王聚集地</p>
+          </div>
+        </div>
+      </div>
+      <!-- 左右控件/图标 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+  </div>
+  <!-- 侧边栏 -->
+
+  <body>
+    <div class="offcanvas offcanvas-start" id="slide" data-bs-scroll="true">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title"></h1>
+        <button type="button" class="btn-close text-reset " data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body offcanbodyextra">
+        <form action="">
+          <p>搜索你想要的内容↓ </p>
+          <input type="text" name="search" id="asidetext">
+          <input type="submit" value="Go">
+        </form>
+        <ul>
+          <HR align=center width=300 color=#987cb9 SIZE=1>
+          <li><a href="jdhistory.html">历史</a></li>
+          <HR align=center width=300 color=#987cb9 SIZE=1>
+          <li><a href="swjtudb.html">地图</a></li>
+          <HR align=center width=300 color=#987cb9 SIZE=1>
+          <li><a href="fuwuquzhidao.html">服务区</a></li>
+          <HR align=center width=300 color=#987cb9 SIZE=1>
+          <li><a href="club_index1.html">社团</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="transpan">
+    </div>
+    <!-- indexpart -->
+    <div id="indexcontent" class="contentpart gridbox">
+      <div class="indexcontentpartleft"></div>
+      <div class="indexcontentpartmiddle">
+        <div class="gridbox aboutus">
+          <!-- 网站介绍 -->
+          <div class="intro">
+
+            <div class="introtitle">
+              网站简介
+            </div>
+
+            <p><i class="fa fa-asterisk"
+                style="font-size:24px;color: white;"></i>本课题旨在建立一个集交大地图、交大历史、交大地标、交大商区、交大社团等功能于一身的“云上交大”主题网站来服务师生以及任何想了解交大内容的访客。
+            </p>
+            <br>
+            <p><i class="fa fa-asterisk"
+                style="font-size:24px;color: white;"></i>该网站通过首页的导航，点击相应链接，跳转到相应的界面，进而获取想要的信息。目前本小组正积极构建“云上交大”雏形，并计划在技术逐渐成熟的同时，不断丰富网站功能与内容。
+            </p>
+            <br>
+            <p><i class="fa fa-asterisk" style="font-size:24px;color: white;"></i>下学期数据库部署上线后会更新功能，整体课设完成会将工程开源到Github
+            </p>
+            <br>
+          </div>
+          <div class="diary">
+            <!-- 开发日志 -->
+            <h1>开发日志</h1>
+            <div>
+              <div class="time">2022.10.3</div>
+              <p>根据开题报告分工，完成对应部分</p>
+              <p>学习css html相关知识</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.10.23</div>
+              <p>学习css html js相关知识</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.10.30</div>
+              <p>用grid 和flex布局对网站css布局方法进行规范</p>
+              <p>设计了logo</p>
+              <p>确定了网站最终呈现草图</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.11.6</div>
+              <p>因为考试复习仅对网站进行微调</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.11.12</div>
+              <p>中期完成项目已经上传至github</p>
+              <p>对后续工程安排进行优化</p>
+              <p>学习js</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.11.20</div>
+              <p>学会markdown,安排任务更方便</p>
+              <p>安排组员微认证</p>
+              <p>推动python项目</p>
+              <p>回顾得分点</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.11.22-11.25</div>
+              <p>突发检查，1h把python弄完</p>
+              <p>跟第五组进行代码交流</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.11.28</div>
+              <p>学习服务器知识进行部署</p>
+              <p>网站主要内容基本完成</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.11.29-12.4</div>
+              <p>
+                <strong>深入学习git,修改了代码托管方式</strong><br><br>
+                完成网站全部内容(剩下半个月进行微调，增加功能)<br><br>
+                制作答辩ppt<br>
+                完成项目安装使用文档<br><br>
+              </p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.12.5-12.11</div>
+              <p>
+                进行期末答辩<br><br>
+                完成python项目（根据需求准备好第三包环境文件要求）<br><br>
+                网站细节根据要求文件做最终修改<br><br>
+                所有成员完成微认证收集<br><br>
+                准备好项目结题报告模板
+              </p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.12.12-12.17</div>
+              <p>
+                在听取所有组工作之后，前端项目完工<br><br>
+                分工完成项目结题报告<br><br>
+                完成项目演示视频<br><br>
+              </p>
+            </div>
+            <br>
+            <hr>
+            <div>
+              <div class="time">2022.12.18-12.26</div>
+              <p>包装好所有文件，提交项目</p>
+            </div>
+            <br>
+            <hr>
+          </div>
+        </div>
+        <div class="contenttraninner"></div>
+        <div class="flexbox contenttran contenttranhis">
+          <div>历史</div>
+          <div><a href="jdhistory.html">learnmore</a></div>
+        </div>
+        <hr>
+        <div class="gridbox history">
+          <div class="gridbox historyinb1">
+            <div class="item-a">
+              <div class="gridbox item-aintro">
+                <h3>交大两次迁徙</h3><br>
+                <p>西南交通大学创建于1896年。1900年，由于八国联军入侵，学堂被迫停办。1905年，更名为唐山铁路学堂</p>
+              </div>
+            </div>
+            <div class="item-b">
+              <div class="gridbox item-bintro">
+                <h3>校徽合并</h3><br>
+                <p>四所交大在1920年被合并</p>
+              </div>
+            </div>
+            <div class="item-c">
+              <div class="gridbox item-cintro">
+                <h3>峨眉校区</h3><br>
+                <p>1989年，西南交通大学主体迁入成都市后，在峨眉校址设立峨眉分校，2003年，峨眉分校更名为峨眉校区</p>
+              </div>
+            </div>
+            <div class="item-d">
+              <div class="gridbox item-dintro">
+                <h3>2022</h3><br>
+                <p>复兴交大，加油干呐</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contenttraninner"></div>
+        <div class="flexbox contenttran contenttranmap">
+          <div>地图</div>
+          <div><a href="swjtudb.html">learnmore</a></div>
+        </div>
+        <hr>
+        <div class="gridbox map">
+          <div class="flexbox mapinb1">
+            <ul>
+              <li><a href="./swjtudb.html"><i class="fa fa-heart-o" style="font-size:24px;color: white;"></i>标志建筑</a></li>
+              <li><a href="https://map.baidu.com/poi/%E8%A5%BF%E5%8D%97%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6(%E7%8A%80%E6%B5%A6%E6%A0%A1%E5%8C%BA)/@11576961.64,3580574.53,21z,87t,-48.49h?uid=1d4e623c6dd73505c356acca&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl#panoid=09019200121904091349179609M&panotype=street&heading=149.4&pitch=7.5&l=21&tn=B_NORMAL_MAP&sc=0&newmap=1&shareurl=1&pid=09019200121904091349179609M" target="_blank"><i class="fa fa-search" style="font-size:24px;color: white;"></i>全景地图</a></li>
+              <li><a href="https://www.kuaidi100.com/"><i class="fa fa-music" style="font-size:24px;color: white;"></i>快递查询</a></li>
+              <li><a href="./fuwuquzhidao.html"><i class="fa fa-recycle" style="font-size:24px;color: white;"></i>服务推荐</a></li>
+            </ul>
+          </div>
+          <div class=" flexbox mapinb2">
+            <div>
+                <h3>教学楼</h3>
+                <img src="{{ url_for('static',filename='img/4-1.JPG') }}" alt="">
+            </div>
+            <div>
+                <h3>历史雕像</h3>
+                <img src="{{ url_for('static',filename='img/6-2.JPG') }}" alt="">
+            </div>
+            <div>
+                <h3>服务区</h3>
+                <img src="{{ url_for('static',filename='img/9-1.JPG') }}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="contenttraninner"></div>
+        <div class="flexbox contenttran contenttranass">
+          <div>社团</div>
+          <div><a href="club_index1.html">learnmore</a></div>
+        </div>
+        <hr>
+        <div class="gridbox association">
+          <div class="gridbox innerass">
+            <div><img src="{{ url_for('static',filename='img/2-1.jpg') }}" alt="">
+              <div class="descrption">
+                <h1>学术类</h1>
+                <p>技能竞赛</p>
+                <p>—软件，硬件，办公—</p>
+              </div>
+            </div>
+            <div><img src="{{ url_for('static',filename='img/2-2.jpg') }}" alt="">
+              <div class="descrption">
+                <h1>体育类</h1>
+                <p>强身健体</p>
+                <p>—球类，舞蹈，运动—</p>
+              </div>
+            </div>
+            <div><img src="{{ url_for('static',filename='img/3-1.jpg') }}" alt="">
+              <div class="descrption">
+                <h1>文艺类</h1>
+                <p>涵养内在</p>
+                <p>—阅读，艺术，思想—</p>
+              </div>
+            </div>
+            <div>
+              <p style="font-size: xx-large;">|</p>
+              <p style="font-size: xx-large;">|</p>
+              <p style="font-size: xx-large;">|</p>
+              <p style="font-size: xx-large;">|</p>
+              <p style="font-size: xx-large;">|</p>
+              <p style="font-size: xx-large;">|</p>
+            </div>
+            <div>
+              <div class="associationofficial">
+                <button><a href="https://ocw.swjtu.edu.cn/yethan/YouthIndex?setAction=clubList">社团官网直链</a></button>
+              </div>
+              <div class="assadvertisement">
+                <h2>友情广告位</h2>
+                <div class="assadvertisementinner">
+                  虚位以待
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button onclick="takebackminipart()" class="tackbackbutton" id="tackbackbutton"><i class="fa fa-angle-double-left"
+          color="black"></i></button>
+      <div class="indexcontentright">
+        <div id="minipart" class="minipart" onmouseover=" minipartchangecolor1()" onmouseleave="minipartchangecolor2()">
+          <button class="minipartclose" onclick="deleteminipart()"><i class="fa fa-close"></i></button>
+          <button><i class="fa fa-delete"></i></button>
+            <img src="{{ url_for('static',filename='img/logo.png') }}"  height="60px" width="190px" alt="">
+          <div class="innerminipart_return">
+            <a href="/">回到上方<i style="font-size:10px" class="fa">&#xf0a5</i></a>
+          </div>
+          <hr>
+          <div class="innerminipart_tran"><strong>一些小功能集合</strong></div>
+          <hr>
+          <div class="innerminipart">
+            <div class="xiaoge">
+              <h4>校歌播放</h4>
+              <audio controls="controls" loop="loop">
+                <source src="{{url_for('static',filename='movie/刘屹然 - 西南交通大学校歌.mp3' )}}" type="audio/mp3">
+                </source>
+              </audio>
+            </div>
+            <hr>
+            <div class="liuyanban">
+              <div>
+                <h4>小型留言板</h4>
+                <input type="text" value=" " class="liuyanbaninput">
+              </div>
+            </div>
+            <div>
+                <h4>当前时间</h4>
+                <div id="timeblock" class="timeblock"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="transpan">
+    </div>
+    <div class="fengong">
+      <h2>小组分工</h2>
+      <div class="flexbox fengonginner">
+        <div class="profile gridbox">
+          <div onmouseover="changefengongstyle1()" onmouseout="returnfengongstyle1()"><img src="{{ url_for('static',filename='img/hxy.png') }}" alt="">
+          </div>
+          <div onmouseover="changefengongstyle2()" onmouseout="returnfengongstyle2()"><img src="{{ url_for('static',filename='img/lxr.jpg') }}" alt="">
+          </div>
+          <div onmouseover="changefengongstyle3()" onmouseout="returnfengongstyle3()"><img src="{{ url_for('static',filename='img/kk.jpg') }}" alt="">
+          </div>
+          <div onmouseover="changefengongstyle4()" onmouseout="returnfengongstyle4()"><img src="{{ url_for('static',filename='img/pxt.jpg') }}" alt="">
+          </div>
+          <div onmouseover="changefengongstyle5()" onmouseout="returnfengongstyle5()"><img src="{{ url_for('static',filename='img/yyb.jpg') }}" alt="">
+          </div>
+          <div onmouseover="changefengongstyle6()" onmouseout="returnfengongstyle6()"><img src="{{ url_for('static',filename='img/zlb.jpg') }}" alt="">
+          </div>
+        </div>
+        <div class="fengongjieshao gridbox">
+          <div id="fengongjieshao1">
+            <h3>2021116386胡翔宇</h3>
+            <p>主页和导航</p>
+          </div>
+          <div id="fengongjieshao2">
+            <h3>2021113264李祥瑞</h3>
+            <p>地标</p>
+          </div>
+          <div id="fengongjieshao3">
+            <h3>2021110398康凯</h3>
+            <p>登录以及辅助</p>
+          </div>
+          <div id="fengongjieshao4">
+            <h3>2021110410潘笑天</h3>
+            <p>历史</p>
+          </div>
+          <div id="fengongjieshao5">
+            <h3>2021116330姚禹博</h3>
+            <p>服务区</p>
+          </div>
+          <div id="fengongjieshao6">
+            <h3>2021113534张力博</h3>
+            <p>社团</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 页脚 -->
+    <div class=" footer">
+      <hr>
+      <div class="footerinfo"> 云上交大提供西南交通大学的各类消息,目前还在建设 <strong>和wiki不同的是我们更具体</strong><a href="index.html" class="logo"><img
+            src="{{ url_for('static',filename='img/swjtu_logo_1.1_sm.png') }}" height="100px"  alt="胶带"></a>
+        @2022.10.10-2022.12.19
+        <br><br>
+      </div>
+      <div class="footerdown flexbox">
+        <div>
+          <h3>地址<i class="fa fa-address-book-o"></i></h3>
+          <p>四川省成都市郫都区犀安路999号</p>
+        </div>
+        <div>
+          <h3>邮编<i class="	fa fa-book"></i></h3>
+          <p>611756</p>
+        </div>
+        <div>
+          <h3>联系我们<i class="	fa fa-connectdevelop"></i></h3>
+          <p>2339126387@qq.com</p>
+        </div>
+        <div>
+          <h3>github主页<i class="fa fa-github"></i></h3>
+          <div>
+
+
+            <a href="https://github.com/CloudSWJTU/total-website"><img class="qrcode" src="{{ url_for('static',filename='img/qrcodegithub.png') }}"
+                alt="主页"></a>
+
+          </div>
+        </div>
+      </div>
+      <div class="transpan"></div>
+      <div class=" flexbox copyright ">
+        Copyright © 2022 Cloudswjtu.All rights reserved.
+      </div>
+    </div>
+{% endblock %}
+

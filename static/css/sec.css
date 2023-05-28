@@ -1,0 +1,30 @@
+/* 历史开头大图 */
+body{
+    position: relative;
+	background-image: url("/img/background3.jpg");
+	background-repeat: repeat repeat;
+	background-size: auto auto;
+}
+.titlebk{
+    background-image: url("../img/竢实扬华.jpg");
+    /* opacity: 0.5; */
+    height: 60vw;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-attachment: fixed;
+    width: 97vw;
+    transition: 0.5s ease 0s;
+    animation: jiazai 1s;
+    overflow: hidden;
+    text-align: center;
+}
+.titlebk .title{
+    text-align: center;
+    position: relative;
+    top: 20vw;
+    font-size: 9vw;
+    font-weight: bolder;
+    color: rgba(108, 177, 234, 0.9);
+    opacity: 0.8;
+
+}

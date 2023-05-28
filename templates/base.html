@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}交大{% endblock %}</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{#    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>#}
+    {% block header %}
+
+    {% endblock %}
+
+
+</head>
+<body>
+
+
+  <header>
+    <a href="/index/indextest" class="logo"><img src="/static/img/swjtu_logo_1.1_sm.png" height="60px" alt="胶带"></a>
+    <div class="navigation" style="text-align:center">
+      <div class="dropdown">
+        <a href="#">历史<i class="fa fa-caret-down"></i></a>
+        <section class="dropdown-content">
+          <a href="/history/list">迁徙</a>
+        </section>
+      </div>
+      <div class="dropdown"><a href="#">地图<i class="fa fa-caret-down"></i></a>
+        <section class="dropdown-content">
+          <a href="/landmark/list">地标</a>
+          <a href="/server/list">服务区</a>
+        </section>
+      </div>
+      <div class="dropdown"><a href="/league/index">社团<i class="fa fa-caret-down"></i></a>
+        <section class="dropdown-content">
+            {% for foo in cates %}
+                      <a href="/league/detail/{{ foo.id }}">{{ foo.name }}</a>
+
+            {% endfor %}
+{#        /active/list#}
+
+                      <a href="/league/active/list">社团</a>
+
+        </section>
+      </div>
+      <div class="dropdown"><a href="#">其他<i class="fa fa-caret-down"></i></a>
+        <section class="dropdown-content">
+          <a href="https://wiki.swjtu.top/">SWJTU wiki</a>
+          <a href="https://www.swjtu.edu.cn/">胶带官网</a>
+        </section>
+      </div>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Search">
+      <a href="/index/indextest"><i class="fa fa-search" aria-hidden="true"></i></a>
+    </div>
+    <div class="right">
+      <div class="rightdefault">
+          {% if current_user %}
+        <a href="/account/person">
+              {% else %}
+                    <a href="/account/login">
+
+            {% endif %}
+
+
+
+            <img src="/static/img/登录.png" height="60px" alt="text">
+        </a>
+      </div>
+{##}
+{#      <button class="rightafter btn " data-bs-toggle="offcanvas" data-bs-target="#slide" type="button"#}
+{#        aria-controls="slide">#}
+{#        <img src="/static/img/3.1列表.png" alt="" height="40px">#}
+{#      </button>#}
+    </div>
+    </div>
+  </header>
+  </div>
+
+{% block content %}
+
+  {% endblock %}
+  <!-- <p>鸣谢：照片人</p> -->
+
+
+</body>
+ </html>
+
+
+
